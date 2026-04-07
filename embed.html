@@ -20,7 +20,7 @@
 
 <script>
 (function() {
-  var URL = "https://raw.githubusercontent.com/tkrise2424/parentai-data/main/trending.json?v=" + Date.now();
+  var URL = "https://cdn.jsdelivr.net/gh/tkrise2424/parentai-data@main/trending.json?v=" + Date.now();
 
   function tagEl(tag, accent) {
     var bg = accent === '#da3c77' ? '#fdeef4' : '#e8f7f5';
@@ -107,6 +107,7 @@
     .then(function(d){ render(d); })
     .catch(function(e){
       document.getElementById('pai-loading').textContent = 'Unable to load trending topics. Please try again later.';
+      console.error('ParentAI widget error:', e);
     });
 })();
 </script>
