@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ParentAI Trending Topics</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: transparent; padding: 20px; }
+  #loading { text-align: center; padding: 60px 0; color: #aaa; font-size: 18px; }
+  .header { text-align: center; margin-bottom: 44px; }
+  .badge { display: inline-block; background: linear-gradient(135deg,#da3c77,#1b5f7a,#10c2a9); border-radius: 50px; padding: 8px 26px; margin-bottom: 18px; }
+  .badge span { color: #fff; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
+  .header h2 { font-size: 42px; font-weight: 800; color: #1b5f7a; margin: 0 0 12px; line-height: 1.15; }
+  .header p { font-size: 18px; color: #888; }
+  .cloud { background: linear-gradient(135deg,#fdf4f8,#f0faf9); border-radius: 20px; padding: 36px 28px; margin-bottom: 40px; text-align: center; border: 1px solid #f0e0e8; }
+  .cloud-label { font-size: 13px; font-weight: 700; color: #da3c77; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 16px; }
+  .cloud-words { line-height: 2; }
+  .ww { display: inline-block; margin: 6px 10px; line-height: 1.2; cursor: default; transition: transform 0.15s; }
+  .ww:hover { transform: scale(1.12); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; align-items: start; }
+  .card { background: #fff; border-radius: 16px; padding: 28px 28px 24px; box-shadow: 0 2px 20px rgba(27,95,122,0.09); margin-bottom: 24px; }
+  .card-top { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 14px; }
+  .card-icon { border-radius: 12px; width: 54px; height: 54px; font-size: 28px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .card-rank { font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 4px; }
+  .card-title { font-size: 20px; font-weight: 800; color: #1b5f7a; line-height: 1.25; }
+  .card-desc { font-size: 16px; color: #444; line-height: 1.7; margin: 0 0 16px; }
+  .bar-bg { background: #eef0f3; border-radius: 6px; height: 7px; margin-bottom: 8px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 6px; }
+  .card-meta { font-size: 14px; color: #999; margin-bottom: 14px; }
+  .tag { display: inline-block; font-size: 13px; font-weight: 700; padding: 5px 13px; border-radius: 20px; margin: 4px 4px 0 0; }
+  .footer { text-align: center; margin-top: 12px; padding-top: 20px; border-top: 1px solid #eee; font-size: 14px; color: #bbb; }
+  @media (max-width: 680px) {
+    .grid { grid-template-columns: 1fr; }
+    .header h2 { font-size: 28px; }
+    .cloud { padding: 16px 10px; margin-bottom: 24px; }
+    .ww { margin: 2px 4px; }
+  }
+</style>
+</head>
+<body>
+<div id="root"><div id="loading">Loading trending topics...</div></div>
+<script>
+(function() {
+  var CDN = 'https://cdn.jsdelivr.net/gh/tkrise2424/parentai-data@main/trending.json';
+
+  function tag(text, accent) {
+    var bg = accent === '#da3c77' ? '#fdeef4' : '#e8f7f5';
+    var el = document.createElement('span');
+    el.className = 'tag';
+    el.style.background = bg;
+    el.style.color = accent;
+    el.textContent = text;
+    return el.outerHTML;
+  }
+
+  function card(t, rank) {
+    var a = t.accent;
+    return '<div class="card" style="border-top:5px solid ' + a + ';">' +
+      '<div class="card-top">' +
+        '<div class="card-icon" style="background:linear-gradient(135deg,' + a + ',#1b5f7a);">' + t.emoji + '</div>' +
+        '<div>' +
+          '<div class="card-rank" style="color:' + a + ';">#' + rank + ' Trending</div>' +
+          '<div class="card-title">' + t.title + '</div>' +
+        '</div>' +
+      '</div>' +
+      '<p class="card-desc">' + t.description + '</p>' +
+      '<div class="bar-bg"><div class="bar-fill" style="background:linear-gradient(90deg,' + a + ',#1b5f7a);width:' + t.pct + '%;"></div></div>' +
+      '<div class="card-meta">' + t.count + ' conversations &middot; ' + t.pct + '% of total</div>' +
+      '<div>' + (t.tags || []).map(function(tg){ return tag(tg, a); }).join('') + '</div>' +
+    '</div>';
+  }
+
+  function wordCloud(words) {
+    return words.map(function(w) {
+      var big = Math.round(18 + (w.weight - 1) * 34 / 6);
+      var small = Math.max(10, Math.round(big * 0.48));
+      var fw = w.weight >= 5 ? '800' : (w.weight >= 3 ? '700' : '600');
+      var op = (0.75 + (w.weight / 7) * 0.25).toFixed(2);
+      return '<span class="ww" data-d="' + big + '" data-m="' + small + '" ' +
+        'style="font-size:' + big + 'px;font-weight:' + fw + ';color:' + w.color + ';opacity:' + op + ';">' +
+        w.word + '</span>';
+    }).join(' ');
+  }
+
+  function render(d) {
+    var topics = d.topics || [];
+    var left  = topics.slice(0,3).map(function(t,i){ return card(t,i+1); }).join('');
+    var right = topics.slice(3,6).map(function(t,i){ return card(t,i+4); }).join('');
+
+    document.getElementById('root').innerHTML =
+      '<div class="header">' +
+        '<div class="badge"><span>Live Insights</span></div>' +
+        '<h2>What Parents Are Asking</h2>' +
+        '<p>Trending topics from real ParentAI conversations &middot; Updated weekly</p>' +
+      '</div>' +
+      '<div class="cloud">' +
+        '<div class="cloud-label">&#128269; Conversation Word Cloud</div>' +
+        '<div class="cloud-words">' + wordCloud(d.word_cloud || []) + '</div>' +
+      '</div>' +
+      '<div class="grid"><div>' + left + '</div><div>' + right + '</div></div>' +
+      '<div class="footer">Powered by <strong style="color:#1b5f7a;">ParentAI</strong> &middot; Last updated ' + d.updated + ' &middot; ' + d.total_conversations + ' conversations</div>';
+
+    window.addEventListener('resize', function() {
+      var mob = window.innerWidth <= 680;
+      document.querySelectorAll('.ww').forEach(function(el) {
+        el.style.fontSize = (mob ? el.getAttribute('data-m') : el.getAttribute('data-d')) + 'px';
+      });
+    });
+  }
+
+  fetch(CDN + '?v=' + Date.now())
+    .then(function(r){ return r.json(); })
+    .then(render)
+    .catch(function(){ document.getElementById('loading').textContent = 'Unable to load topics. Please try again later.'; });
+})();
+</script>
+</body>
+</html>
