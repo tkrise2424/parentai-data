@@ -1,113 +1,67 @@
-<!-- ParentAI Trending Topics Widget — SELF-UPDATING -->
-<!-- Paste ONCE into Squarespace Code Block. Never touch again. -->
+<!-- ParentAI Trending Topics Widget - April 7, 2026 -->
+<!-- Paste into Squarespace Code Block -->
 <style>
-#pai-wrap { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; max-width: 1100px; margin: 0 auto; padding: 40px 20px; box-sizing: border-box; }
-#pai-wrap * { box-sizing: border-box; }
-.pai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; align-items: start; }
-.pai-card { background: #fff; border-radius: 16px; padding: 28px 28px 24px 28px; box-shadow: 0 2px 20px rgba(27,95,122,0.09); margin-bottom: 24px; }
-.pai-cloud { background: linear-gradient(135deg,#fdf4f8,#f0faf9); border-radius: 20px; padding: 36px 28px; margin-bottom: 40px; text-align: center; border: 1px solid #f0e0e8; }
-@media (max-width: 680px) {
-  .pai-grid { grid-template-columns: 1fr !important; }
-  #pai-wrap h2 { font-size: 28px !important; }
-  .pai-cloud { padding: 16px 10px !important; margin-bottom: 24px !important; }
-  .pai-ww { margin: 2px 4px !important; line-height: 1.1 !important; }
+#pai-wrap{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;max-width:1100px;margin:0 auto;padding:40px 20px;box-sizing:border-box;}
+#pai-wrap *{box-sizing:border-box;}
+.pai-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 28px;align-items:start;}
+.pai-card{background:#fff;border-radius:16px;padding:28px 28px 24px;box-shadow:0 2px 20px rgba(27,95,122,0.09);margin-bottom:24px;}
+.pai-cloud{background:linear-gradient(135deg,#fdf4f8,#f0faf9);border-radius:20px;padding:36px 28px;margin-bottom:40px;text-align:center;border:1px solid #f0e0e8;}
+@media(max-width:680px){
+  .pai-grid{grid-template-columns:1fr!important;}
+  #pai-wrap h2{font-size:28px!important;}
+  .pai-cloud{padding:16px 10px!important;margin-bottom:24px!important;}
+  .pai-ww{margin:2px 4px!important;line-height:1.1!important;}
 }
 </style>
-
 <div id="pai-wrap">
-  <div id="pai-loading" style="text-align:center;padding:60px 0;color:#aaa;font-size:18px;">Loading trending topics...</div>
+  <div style="text-align:center;margin-bottom:44px;">
+    <div style="display:inline-block;background:linear-gradient(135deg,#da3c77,#1b5f7a,#10c2a9);border-radius:50px;padding:8px 26px;margin-bottom:18px;">
+      <span style="color:#fff;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;">Live Insights</span>
+    </div>
+    <h2 style="font-size:42px;font-weight:800;color:#1b5f7a;margin:0 0 12px;line-height:1.15;">What Parents Are Asking</h2>
+    <p style="font-size:18px;color:#888;margin:0;">Trending topics from real ParentAI conversations &middot; Updated weekly</p>
+  </div>
+  <div class="pai-cloud">
+    <div style="font-size:13px;font-weight:700;color:#da3c77;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;">&#128269; Conversation Word Cloud</div>
+    <div style="line-height:2;"><span class="pai-ww" data-d="52" data-m="24" style="font-size:52px;font-weight:800;color:#da3c77;opacity:1.0;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">Newborn Fever</span>
+<span class="pai-ww" data-d="46" data-m="22" style="font-size:46px;font-weight:800;color:#1b5f7a;opacity:0.96;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">Congestion</span>
+<span class="pai-ww" data-d="46" data-m="22" style="font-size:46px;font-weight:800;color:#10c2a9;opacity:0.96;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">Sleep Schedule</span>
+<span class="pai-ww" data-d="40" data-m="19" style="font-size:40px;font-weight:800;color:#da3c77;opacity:0.93;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">Breastfeeding</span>
+<span class="pai-ww" data-d="40" data-m="19" style="font-size:40px;font-weight:800;color:#1b5f7a;opacity:0.93;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">Hospital Bag</span>
+<span class="pai-ww" data-d="40" data-m="19" style="font-size:40px;font-weight:800;color:#10c2a9;opacity:0.93;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">Cough & Cold</span>
+<span class="pai-ww" data-d="35" data-m="16" style="font-size:35px;font-weight:700;color:#da3c77;opacity:0.89;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">Nap Schedules</span>
+<span class="pai-ww" data-d="35" data-m="16" style="font-size:35px;font-weight:700;color:#1b5f7a;opacity:0.89;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">Labor & Delivery</span>
+<span class="pai-ww" data-d="35" data-m="16" style="font-size:35px;font-weight:700;color:#10c2a9;opacity:0.89;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">Allergies</span>
+<span class="pai-ww" data-d="29" data-m="13" style="font-size:29px;font-weight:700;color:#da3c77;opacity:0.86;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">Down Syndrome</span>
+<span class="pai-ww" data-d="29" data-m="13" style="font-size:29px;font-weight:700;color:#1b5f7a;opacity:0.86;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">Bedwetting</span>
+<span class="pai-ww" data-d="29" data-m="13" style="font-size:29px;font-weight:700;color:#10c2a9;opacity:0.86;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">Ear Care</span>
+<span class="pai-ww" data-d="29" data-m="13" style="font-size:29px;font-weight:700;color:#da3c77;opacity:0.86;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">Anxiety</span>
+<span class="pai-ww" data-d="29" data-m="13" style="font-size:29px;font-weight:700;color:#1b5f7a;opacity:0.86;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">Postpartum Prep</span>
+<span class="pai-ww" data-d="23" data-m="11" style="font-size:23px;font-weight:600;color:#10c2a9;opacity:0.82;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">Bottle Feeding</span>
+<span class="pai-ww" data-d="23" data-m="11" style="font-size:23px;font-weight:600;color:#da3c77;opacity:0.82;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">Night Fussiness</span>
+<span class="pai-ww" data-d="23" data-m="11" style="font-size:23px;font-weight:600;color:#1b5f7a;opacity:0.82;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">Early Intervention</span>
+<span class="pai-ww" data-d="23" data-m="11" style="font-size:23px;font-weight:600;color:#10c2a9;opacity:0.82;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">First-Time Parents</span>
+<span class="pai-ww" data-d="23" data-m="11" style="font-size:23px;font-weight:600;color:#da3c77;opacity:0.82;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">Getting Started</span>
+<span class="pai-ww" data-d="18" data-m="10" style="font-size:18px;font-weight:600;color:#1b5f7a;opacity:0.79;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">Telehealth</span>
+<span class="pai-ww" data-d="18" data-m="10" style="font-size:18px;font-weight:600;color:#10c2a9;opacity:0.79;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">Sore Throat</span>
+<span class="pai-ww" data-d="18" data-m="10" style="font-size:18px;font-weight:600;color:#da3c77;opacity:0.79;display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">Pediatrician</span></div>
+  </div>
+  <div class="pai-grid">
+    <div><div class="pai-card" style="border-top:5px solid #da3c77;"><div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:14px;"><div style="background:linear-gradient(135deg,#da3c77,#1b5f7a);border-radius:12px;width:54px;height:54px;font-size:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">🤧</div><div><div style="font-size:12px;font-weight:700;color:#da3c77;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:4px;">#1 Trending</div><div style="font-size:20px;font-weight:800;color:#1b5f7a;line-height:1.25;">Infant & Baby Health</div></div></div><p style="font-size:16px;color:#444;line-height:1.7;margin:0 0 16px 0;">Fever in newborns, nasal congestion, coughs, sore throats, and when to seek care</p><div style="background:#eef0f3;border-radius:6px;height:7px;margin-bottom:8px;overflow:hidden;"><div style="background:linear-gradient(90deg,#da3c77,#1b5f7a);width:35%;height:100%;border-radius:6px;"></div></div><div style="font-size:14px;color:#999;margin-bottom:14px;">8 conversations &middot; 35% of total</div><div><span style="display:inline-block;background:#fdeef4;color:#da3c77;font-size:13px;font-weight:700;padding:5px 13px;border-radius:20px;margin:4px 4px 0 0;">Newborn Fever</span><span style="display:inline-block;background:#fdeef4;color:#da3c77;font-size:13px;font-weight:700;padding:5px 13px;border-radius:20px;margin:4px 4px 0 0;">Congestion</span><span style="display:inline-block;background:#fdeef4;color:#da3c77;font-size:13px;font-weight:700;padding:5px 13px;border-radius:20px;margin:4px 4px 0 0;">Cough & Cold</span><span style="display:inline-block;background:#fdeef4;color:#da3c77;font-size:13px;font-weight:700;padding:5px 13px;border-radius:20px;margin:4px 4px 0 0;">Ear Care</span></div></div><div class="pai-card" style="border-top:5px solid #10c2a9;"><div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:14px;"><div style="background:linear-gradient(135deg,#10c2a9,#1b5f7a);border-radius:12px;width:54px;height:54px;font-size:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">😴</div><div><div style="font-size:12px;font-weight:700;color:#10c2a9;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:4px;">#2 Trending</div><div style="font-size:20px;font-weight:800;color:#1b5f7a;line-height:1.25;">Sleep & Soothing</div></div></div><p style="font-size:16px;color:#444;line-height:1.7;margin:0 0 16px 0;">Nap schedules, day-night confusion, bedwetting, and calming fussy babies at night</p><div style="background:#eef0f3;border-radius:6px;height:7px;margin-bottom:8px;overflow:hidden;"><div style="background:linear-gradient(90deg,#10c2a9,#1b5f7a);width:22%;height:100%;border-radius:6px;"></div></div><div style="font-size:14px;color:#999;margin-bottom:14px;">5 conversations &middot; 22% of total</div><div><span style="display:inline-block;background:#e8f7f5;color:#10c2a9;font-size:13px;font-weight:700;padding:5px 13px;border-radius:20px;margin:4px 4px 0 0;">Nap Schedules</span><span style="display:inline-block;background:#e8f7f5;color:#10c2a9;font-size:13px;font-weight:700;padding:5px 13px;border-radius:20px;margin:4px 4px 0 0;">Bedwetting</span><span style="display:inline-block;background:#e8f7f5;color:#10c2a9;font-size:13px;font-weight:700;padding:5px 13px;border-radius:20px;margin:4px 4px 0 0;">Night Fussiness</span><span style="display:inline-block;background:#e8f7f5;color:#10c2a9;font-size:13px;font-weight:700;padding:5px 13px;border-radius:20px;margin:4px 4px 0 0;">Newborn Sleep</span></div></div><div class="pai-card" style="border-top:5px solid #da3c77;"><div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:14px;"><div style="background:linear-gradient(135deg,#da3c77,#1b5f7a);border-radius:12px;width:54px;height:54px;font-size:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">🏥</div><div><div style="font-size:12px;font-weight:700;color:#da3c77;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:4px;">#3 Trending</div><div style="font-size:20px;font-weight:800;color:#1b5f7a;line-height:1.25;">Birth Prep & Hospital</div></div></div><p style="font-size:16px;color:#444;line-height:1.7;margin:0 0 16px 0;">Hospital bag essentials, labor timelines, delivery questions, and going home ready</p><div style="background:#eef0f3;border-radius:6px;height:7px;margin-bottom:8px;overflow:hidden;"><div style="background:linear-gradient(90deg,#da3c77,#1b5f7a);width:22%;height:100%;border-radius:6px;"></div></div><div style="font-size:14px;color:#999;margin-bottom:14px;">5 conversations &middot; 22% of total</div><div><span style="display:inline-block;background:#fdeef4;color:#da3c77;font-size:13px;font-weight:700;padding:5px 13px;border-radius:20px;margin:4px 4px 0 0;">Hospital Bag</span><span style="display:inline-block;background:#fdeef4;color:#da3c77;font-size:13px;font-weight:700;padding:5px 13px;border-radius:20px;margin:4px 4px 0 0;">Labor & Delivery</span><span style="display:inline-block;background:#fdeef4;color:#da3c77;font-size:13px;font-weight:700;padding:5px 13px;border-radius:20px;margin:4px 4px 0 0;">Postpartum Prep</span></div></div></div>
+    <div><div class="pai-card" style="border-top:5px solid #10c2a9;"><div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:14px;"><div style="background:linear-gradient(135deg,#10c2a9,#1b5f7a);border-radius:12px;width:54px;height:54px;font-size:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">🍼</div><div><div style="font-size:12px;font-weight:700;color:#10c2a9;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:4px;">#4 Trending</div><div style="font-size:20px;font-weight:800;color:#1b5f7a;line-height:1.25;">Feeding & Nutrition</div></div></div><p style="font-size:16px;color:#444;line-height:1.7;margin:0 0 16px 0;">Breastfeeding challenges, combo feeding, and identifying food allergies in children</p><div style="background:#eef0f3;border-radius:6px;height:7px;margin-bottom:8px;overflow:hidden;"><div style="background:linear-gradient(90deg,#10c2a9,#1b5f7a);width:13%;height:100%;border-radius:6px;"></div></div><div style="font-size:14px;color:#999;margin-bottom:14px;">3 conversations &middot; 13% of total</div><div><span style="display:inline-block;background:#e8f7f5;color:#10c2a9;font-size:13px;font-weight:700;padding:5px 13px;border-radius:20px;margin:4px 4px 0 0;">Breastfeeding</span><span style="display:inline-block;background:#e8f7f5;color:#10c2a9;font-size:13px;font-weight:700;padding:5px 13px;border-radius:20px;margin:4px 4px 0 0;">Bottle Feeding</span><span style="display:inline-block;background:#e8f7f5;color:#10c2a9;font-size:13px;font-weight:700;padding:5px 13px;border-radius:20px;margin:4px 4px 0 0;">Allergies</span></div></div><div class="pai-card" style="border-top:5px solid #da3c77;"><div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:14px;"><div style="background:linear-gradient(135deg,#da3c77,#1b5f7a);border-radius:12px;width:54px;height:54px;font-size:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">🧠</div><div><div style="font-size:12px;font-weight:700;color:#da3c77;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:4px;">#5 Trending</div><div style="font-size:20px;font-weight:800;color:#1b5f7a;line-height:1.25;">Child Development & Behavior</div></div></div><p style="font-size:16px;color:#444;line-height:1.7;margin:0 0 16px 0;">Supporting children with anxiety, Down syndrome, and developmental milestones</p><div style="background:#eef0f3;border-radius:6px;height:7px;margin-bottom:8px;overflow:hidden;"><div style="background:linear-gradient(90deg,#da3c77,#1b5f7a);width:9%;height:100%;border-radius:6px;"></div></div><div style="font-size:14px;color:#999;margin-bottom:14px;">2 conversations &middot; 9% of total</div><div><span style="display:inline-block;background:#fdeef4;color:#da3c77;font-size:13px;font-weight:700;padding:5px 13px;border-radius:20px;margin:4px 4px 0 0;">Anxiety</span><span style="display:inline-block;background:#fdeef4;color:#da3c77;font-size:13px;font-weight:700;padding:5px 13px;border-radius:20px;margin:4px 4px 0 0;">Down Syndrome</span><span style="display:inline-block;background:#fdeef4;color:#da3c77;font-size:13px;font-weight:700;padding:5px 13px;border-radius:20px;margin:4px 4px 0 0;">Early Intervention</span></div></div><div class="pai-card" style="border-top:5px solid #10c2a9;"><div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:14px;"><div style="background:linear-gradient(135deg,#10c2a9,#1b5f7a);border-radius:12px;width:54px;height:54px;font-size:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">💬</div><div><div style="font-size:12px;font-weight:700;color:#10c2a9;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:4px;">#6 Trending</div><div style="font-size:20px;font-weight:800;color:#1b5f7a;line-height:1.25;">General Parenting Questions</div></div></div><p style="font-size:16px;color:#444;line-height:1.7;margin:0 0 16px 0;">First-time parent questions, getting started with ParentAI, and general guidance</p><div style="background:#eef0f3;border-radius:6px;height:7px;margin-bottom:8px;overflow:hidden;"><div style="background:linear-gradient(90deg,#10c2a9,#1b5f7a);width:22%;height:100%;border-radius:6px;"></div></div><div style="font-size:14px;color:#999;margin-bottom:14px;">5 conversations &middot; 22% of total</div><div><span style="display:inline-block;background:#e8f7f5;color:#10c2a9;font-size:13px;font-weight:700;padding:5px 13px;border-radius:20px;margin:4px 4px 0 0;">First-Time Parents</span><span style="display:inline-block;background:#e8f7f5;color:#10c2a9;font-size:13px;font-weight:700;padding:5px 13px;border-radius:20px;margin:4px 4px 0 0;">Getting Started</span><span style="display:inline-block;background:#e8f7f5;color:#10c2a9;font-size:13px;font-weight:700;padding:5px 13px;border-radius:20px;margin:4px 4px 0 0;">General Advice</span></div></div></div>
+  </div>
+  <div style="text-align:center;margin-top:12px;padding-top:20px;border-top:1px solid #eee;">
+    <p style="font-size:14px;color:#bbb;margin:0;">Powered by <strong style="color:#1b5f7a;">ParentAI</strong> &middot; Last updated April 7, 2026 &middot; 23 conversations</p>
+  </div>
 </div>
-
 <script>
-(function() {
-  var URL = "https://cdn.jsdelivr.net/gh/tkrise2424/parentai-data@main/trending.json?v=" + Date.now();
-
-  function tagEl(tag, accent) {
-    var bg = accent === '#da3c77' ? '#fdeef4' : '#e8f7f5';
-    return '<span style="display:inline-block;background:' + bg + ';color:' + accent + ';font-size:13px;font-weight:700;padding:5px 13px;border-radius:20px;margin:4px 4px 0 0;">' + tag + '</span>';
-  }
-
-  function card(t, rank) {
-    var a = t.accent;
-    var grad = 'linear-gradient(135deg,' + a + ',#1b5f7a)';
-    var bar  = 'linear-gradient(90deg,' + a + ',#1b5f7a)';
-    var tags = (t.tags || []).map(function(tg){ return tagEl(tg, a); }).join('');
-    return '<div class="pai-card" style="border-top:5px solid ' + a + ';">' +
-      '<div style="display:flex;align-items:flex-start;gap:16px;margin-bottom:14px;">' +
-        '<div style="background:' + grad + ';border-radius:12px;width:54px;height:54px;font-size:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">' + t.emoji + '</div>' +
-        '<div>' +
-          '<div style="font-size:12px;font-weight:700;color:' + a + ';letter-spacing:1.2px;text-transform:uppercase;margin-bottom:4px;">#' + rank + ' Trending</div>' +
-          '<div style="font-size:20px;font-weight:800;color:#1b5f7a;line-height:1.25;">' + t.title + '</div>' +
-        '</div>' +
-      '</div>' +
-      '<p style="font-size:16px;color:#444;line-height:1.7;margin:0 0 16px 0;">' + t.description + '</p>' +
-      '<div style="background:#eef0f3;border-radius:6px;height:7px;margin-bottom:8px;overflow:hidden;">' +
-        '<div style="background:' + bar + ';width:' + t.pct + '%;height:100%;border-radius:6px;"></div>' +
-      '</div>' +
-      '<div style="font-size:14px;color:#999;margin-bottom:14px;">' + t.count + ' conversations &middot; ' + t.pct + '% of total</div>' +
-      '<div>' + tags + '</div>' +
-    '</div>';
-  }
-
-  function wSize(w, mobile) {
-    var big = Math.round(18 + (w - 1) * 34 / 6);
-    return mobile ? Math.max(10, Math.round(big * 0.48)) : big;
-  }
-
-  function cloud(words) {
-    var mob = window.innerWidth <= 680;
-    return words.map(function(w) {
-      var fs = wSize(w.weight, mob);
-      var fw = w.weight >= 5 ? '800' : (w.weight >= 3 ? '700' : '600');
-      var op = (0.75 + (w.weight / 7) * 0.25).toFixed(2);
-      return '<span class="pai-ww" data-d="' + wSize(w.weight, false) + '" data-m="' + wSize(w.weight, true) + '" ' +
-        'style="font-size:' + fs + 'px;font-weight:' + fw + ';color:' + w.color + ';opacity:' + op + ';display:inline-block;margin:6px 10px;line-height:1.2;cursor:default;transition:transform 0.15s;" ' +
-        'onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">' + w.word + '</span>';
-    }).join(' ');
-  }
-
-  function resize() {
-    var mob = window.innerWidth <= 680;
-    document.querySelectorAll('.pai-ww').forEach(function(el) {
-      el.style.fontSize = (mob ? el.getAttribute('data-m') : el.getAttribute('data-d')) + 'px';
+(function(){
+  function resize(){
+    var mob=window.innerWidth<=680;
+    document.querySelectorAll('.pai-ww').forEach(function(el){
+      el.style.fontSize=(mob?el.getAttribute('data-m'):el.getAttribute('data-d'))+'px';
     });
   }
-
-  function render(d) {
-    var topics = d.topics || [];
-    var left  = topics.slice(0,3).map(function(t,i){ return card(t, i+1); }).join('');
-    var right = topics.slice(3,6).map(function(t,i){ return card(t, i+4); }).join('');
-
-    var html =
-      '<div style="text-align:center;margin-bottom:44px;">' +
-        '<div style="display:inline-block;background:linear-gradient(135deg,#da3c77,#1b5f7a,#10c2a9);border-radius:50px;padding:8px 26px;margin-bottom:18px;">' +
-          '<span style="color:#fff;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;">Live Insights</span>' +
-        '</div>' +
-        '<h2 style="font-size:42px;font-weight:800;color:#1b5f7a;margin:0 0 12px 0;line-height:1.15;">What Parents Are Asking</h2>' +
-        '<p style="font-size:18px;color:#888;margin:0;">Trending topics from real ParentAI conversations &middot; Updated weekly</p>' +
-      '</div>' +
-      '<div class="pai-cloud">' +
-        '<div style="font-size:13px;font-weight:700;color:#da3c77;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;">&#128269; Conversation Word Cloud</div>' +
-        '<div style="line-height:2;">' + cloud(d.word_cloud || []) + '</div>' +
-      '</div>' +
-      '<div class="pai-grid">' +
-        '<div>' + left + '</div>' +
-        '<div>' + right + '</div>' +
-      '</div>' +
-      '<div style="text-align:center;margin-top:12px;padding-top:20px;border-top:1px solid #eee;">' +
-        '<p style="font-size:14px;color:#bbb;margin:0;">Powered by <strong style="color:#1b5f7a;">ParentAI</strong> &middot; Last updated ' + d.updated + ' &middot; ' + d.total_conversations + ' conversations</p>' +
-      '</div>';
-
-    document.getElementById('pai-wrap').innerHTML = html;
-    window.addEventListener('resize', resize);
-  }
-
-  fetch(URL)
-    .then(function(r){ return r.json(); })
-    .then(function(d){ render(d); })
-    .catch(function(e){
-      document.getElementById('pai-loading').textContent = 'Unable to load trending topics. Please try again later.';
-      console.error('ParentAI widget error:', e);
-    });
+  window.addEventListener('resize',resize);
 })();
 </script>
