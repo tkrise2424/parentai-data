@@ -3,176 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TDM Sequence Performance Dashboard</title>
+  <title>TDM Performance Dashboard</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #0f1117;
-      color: #e2e8f0;
-      min-height: 100vh;
-      padding: 32px 16px;
-    }
-    .container { max-width: 960px; margin: 0 auto; }
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 32px;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .header h1 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: -0.5px;
-    }
-    .header .subtitle {
-      font-size: 0.85rem;
-      color: #718096;
-      margin-top: 4px;
-    }
-    .badge {
-      background: #1a1f2e;
-      border: 1px solid #2d3748;
-      border-radius: 20px;
-      padding: 6px 14px;
-      font-size: 0.78rem;
-      color: #63b3ed;
-      white-space: nowrap;
-    }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f1117; color: #e2e8f0; min-height: 100vh; padding: 32px 16px; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; flex-wrap: wrap; gap: 12px; }
+    .header h1 { font-size: 1.6rem; font-weight: 700; color: #fff; letter-spacing: -0.5px; }
+    .header .subtitle { font-size: 0.85rem; color: #718096; margin-top: 4px; }
+    .badge { background: #1a1f2e; border: 1px solid #2d3748; border-radius: 20px; padding: 6px 14px; font-size: 0.78rem; color: #63b3ed; white-space: nowrap; }
     .badge span { font-weight: 700; }
-    .section-title {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: #4a5568;
-      margin-bottom: 14px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 14px;
-      margin-bottom: 28px;
-    }
-    .card {
-      background: #1a1f2e;
-      border: 1px solid #2d3748;
-      border-radius: 12px;
-      padding: 20px 18px;
-      transition: border-color 0.2s;
-    }
+    .section-title { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #4a5568; margin-bottom: 14px; }
+    .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .section-header .section-title { margin-bottom: 0; }
+    .section-icon { font-size: 1rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; margin-bottom: 28px; }
+    .card { background: #1a1f2e; border: 1px solid #2d3748; border-radius: 12px; padding: 18px 16px; transition: border-color 0.2s; }
     .card:hover { border-color: #4a90d9; }
-    .card .label {
-      font-size: 0.72rem;
-      color: #718096;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      margin-bottom: 8px;
-    }
-    .card .value {
-      font-size: 1.9rem;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1;
-    }
-    .card .sub {
-      font-size: 0.78rem;
-      color: #4a5568;
-      margin-top: 6px;
-    }
+    .card .label { font-size: 0.72rem; color: #718096; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 8px; }
+    .card .value { font-size: 1.8rem; font-weight: 700; color: #fff; line-height: 1; }
+    .card .sub { font-size: 0.75rem; color: #4a5568; margin-top: 6px; }
     .card.highlight .value { color: #63b3ed; }
     .card.green .value { color: #68d391; }
     .card.yellow .value { color: #f6e05e; }
     .card.red .value { color: #fc8181; }
-    .rates-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 14px;
-      margin-bottom: 28px;
-    }
-    .rate-card {
-      background: #1a1f2e;
-      border: 1px solid #2d3748;
-      border-radius: 12px;
-      padding: 18px;
-    }
-    .rate-card .rate-label {
-      font-size: 0.72rem;
-      color: #718096;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      margin-bottom: 10px;
-    }
-    .rate-card .rate-value {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .bar-bg {
-      background: #2d3748;
-      border-radius: 4px;
-      height: 6px;
-      width: 100%;
-      overflow: hidden;
-    }
-    .bar-fill {
-      height: 100%;
-      border-radius: 4px;
-      transition: width 0.6s ease;
-    }
-    .seq-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #1a1f2e;
-      border: 1px solid #2d3748;
-      border-radius: 10px;
-      padding: 14px 18px;
-      margin-bottom: 10px;
-    }
+    .card.purple .value { color: #b794f4; }
+    .card.linkedin .value { color: #0a9cf5; }
+    .rates-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 14px; margin-bottom: 28px; }
+    .rate-card { background: #1a1f2e; border: 1px solid #2d3748; border-radius: 12px; padding: 18px; }
+    .rate-card .rate-label { font-size: 0.72rem; color: #718096; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 10px; }
+    .rate-card .rate-value { font-size: 1.4rem; font-weight: 700; margin-bottom: 8px; }
+    .bar-bg { background: #2d3748; border-radius: 4px; height: 6px; width: 100%; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 4px; transition: width 0.6s ease; }
+    .seq-row { display: flex; align-items: center; justify-content: space-between; background: #1a1f2e; border: 1px solid #2d3748; border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; }
     .seq-row .seq-label { font-size: 0.85rem; color: #a0aec0; }
     .seq-row .seq-nums { display: flex; gap: 20px; }
     .seq-row .seq-num { text-align: right; }
     .seq-row .seq-num .n { font-size: 1.1rem; font-weight: 700; color: #fff; }
     .seq-row .seq-num .l { font-size: 0.68rem; color: #4a5568; text-transform: uppercase; }
-    .active-dot {
-      display: inline-block;
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: #68d391;
-      margin-right: 7px;
-      vertical-align: middle;
-    }
-    .inactive-dot {
-      display: inline-block;
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: #fc8181;
-      margin-right: 7px;
-      vertical-align: middle;
-    }
-    .footer {
-      margin-top: 36px;
-      text-align: center;
-      font-size: 0.72rem;
-      color: #2d3748;
-    }
-    .sms-row {
-      background: #1a1f2e;
-      border: 1px solid #2d3748;
-      border-radius: 12px;
-      padding: 18px;
-      margin-bottom: 28px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
+    .active-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #68d391; margin-right: 7px; vertical-align: middle; }
+    .inactive-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #fc8181; margin-right: 7px; vertical-align: middle; }
+    .sms-row { background: #1a1f2e; border: 1px solid #2d3748; border-radius: 12px; padding: 18px; margin-bottom: 28px; display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
     .sms-row .sms-label { font-size: 0.78rem; color: #718096; }
     .sms-row .sms-val { font-size: 1.2rem; font-weight: 700; color: #b794f4; }
+    .divider { border: none; border-top: 1px solid #2d3748; margin: 32px 0; }
+    /* Prosp LinkedIn Table */
+    .li-table-wrap { overflow-x: auto; margin-bottom: 28px; }
+    table.li-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    table.li-table th { background: #1a1f2e; color: #4a5568; text-transform: uppercase; letter-spacing: 0.8px; font-size: 0.68rem; padding: 10px 14px; text-align: right; border-bottom: 1px solid #2d3748; white-space: nowrap; }
+    table.li-table th:first-child { text-align: left; }
+    table.li-table td { padding: 11px 14px; text-align: right; border-bottom: 1px solid #1a1f2e; color: #e2e8f0; }
+    table.li-table td:first-child { text-align: left; color: #a0aec0; font-size: 0.78rem; max-width: 220px; word-break: break-word; }
+    table.li-table tr:hover td { background: #1a1f2e; }
+    table.li-table tr.totals-row td { font-weight: 700; color: #63b3ed; border-top: 1px solid #2d3748; background: #141820; }
+    table.li-table tr.totals-row td:first-child { color: #63b3ed; }
+    .rate-hi { color: #68d391; font-weight: 700; }
+    .rate-mid { color: #f6e05e; font-weight: 700; }
+    .rate-lo { color: #fc8181; }
+    /* Prosp summary cards */
+    .li-summary { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; margin-bottom: 20px; }
+    .footer { margin-top: 36px; text-align: center; font-size: 0.72rem; color: #2d3748; }
   </style>
 </head>
 <body>
@@ -180,131 +70,145 @@
 
   <div class="header">
     <div>
-      <h1>TDM Sequence Performance</h1>
-      <div class="subtitle">All-time aggregate metrics &mdash; TDM Company</div>
+      <h1>TDM Performance Dashboard</h1>
+      <div class="subtitle">Email sequences &amp; LinkedIn outreach &mdash; All-time</div>
     </div>
-    <div class="badge">Last updated: <span id="updated"></span></div>
+    <div class="badge">Updated: <span id="updated"></span></div>
   </div>
 
-  <!-- Volume KPIs -->
-  <div class="section-title">Volume</div>
+  <!-- ===== EMAIL SEQUENCES ===== -->
+  <div class="section-header">
+    <div class="section-icon">✉️</div>
+    <div class="section-title">Email Sequences (Platform)</div>
+  </div>
+
   <div class="grid">
-    <div class="card highlight">
-      <div class="label">Total Sent</div>
-      <div class="value">3,537</div>
-      <div class="sub">executions</div>
-    </div>
-    <div class="card green">
-      <div class="label">Unique Opens</div>
-      <div class="value">119</div>
-      <div class="sub">contacts</div>
-    </div>
-    <div class="card green">
-      <div class="label">Unique Clicks</div>
-      <div class="value">103</div>
-      <div class="sub">contacts</div>
-    </div>
-    <div class="card">
-      <div class="label">Unique Replies</div>
-      <div class="value">0</div>
-      <div class="sub">contacts</div>
-    </div>
-    <div class="card">
-      <div class="label">Meetings Booked</div>
-      <div class="value">0</div>
-      <div class="sub">bookings</div>
-    </div>
-    <div class="card red">
-      <div class="label">Bounces</div>
-      <div class="value">66</div>
-      <div class="sub">emails</div>
-    </div>
-    <div class="card yellow">
-      <div class="label">Out of Office</div>
-      <div class="value">9</div>
-      <div class="sub">contacts</div>
-    </div>
-    <div class="card">
-      <div class="label">Pending Approvals</div>
-      <div class="value">1</div>
-      <div class="sub">awaiting</div>
-    </div>
+    <div class="card highlight"><div class="label">Total Sent</div><div class="value">3,537</div><div class="sub">executions</div></div>
+    <div class="card green"><div class="label">Unique Opens</div><div class="value">119</div><div class="sub">contacts</div></div>
+    <div class="card green"><div class="label">Unique Clicks</div><div class="value">103</div><div class="sub">contacts</div></div>
+    <div class="card"><div class="label">Unique Replies</div><div class="value">0</div><div class="sub">contacts</div></div>
+    <div class="card"><div class="label">Meetings Booked</div><div class="value">0</div><div class="sub">bookings</div></div>
+    <div class="card red"><div class="label">Bounces</div><div class="value">66</div><div class="sub">emails</div></div>
+    <div class="card yellow"><div class="label">Out of Office</div><div class="value">9</div><div class="sub">contacts</div></div>
+    <div class="card purple"><div class="label">SMS Sent</div><div class="value">208</div><div class="sub">messages</div></div>
   </div>
 
-  <!-- Rates -->
-  <div class="section-title">Engagement Rates</div>
   <div class="rates-grid">
-    <div class="rate-card">
-      <div class="rate-label">Open Rate</div>
-      <div class="rate-value" style="color:#63b3ed">3.36%</div>
-      <div class="bar-bg"><div class="bar-fill" style="width:3.36%;background:#63b3ed"></div></div>
-    </div>
-    <div class="rate-card">
-      <div class="rate-label">Click Rate</div>
-      <div class="rate-value" style="color:#68d391">2.91%</div>
-      <div class="bar-bg"><div class="bar-fill" style="width:2.91%;background:#68d391"></div></div>
-    </div>
-    <div class="rate-card">
-      <div class="rate-label">Reply Rate</div>
-      <div class="rate-value" style="color:#a0aec0">0.00%</div>
-      <div class="bar-bg"><div class="bar-fill" style="width:0%;background:#a0aec0"></div></div>
-    </div>
-    <div class="rate-card">
-      <div class="rate-label">Bounce Rate</div>
-      <div class="rate-value" style="color:#fc8181">1.87%</div>
-      <div class="bar-bg"><div class="bar-fill" style="width:1.87%;background:#fc8181"></div></div>
-    </div>
-    <div class="rate-card">
-      <div class="rate-label">OOO Rate</div>
-      <div class="rate-value" style="color:#f6e05e">0.25%</div>
-      <div class="bar-bg"><div class="bar-fill" style="width:0.25%;background:#f6e05e"></div></div>
-    </div>
-    <div class="rate-card">
-      <div class="rate-label">Booking Rate</div>
-      <div class="rate-value" style="color:#b794f4">0.00%</div>
-      <div class="bar-bg"><div class="bar-fill" style="width:0%;background:#b794f4"></div></div>
-    </div>
+    <div class="rate-card"><div class="rate-label">Open Rate</div><div class="rate-value" style="color:#63b3ed">3.36%</div><div class="bar-bg"><div class="bar-fill" style="width:3.36%;background:#63b3ed"></div></div></div>
+    <div class="rate-card"><div class="rate-label">Click Rate</div><div class="rate-value" style="color:#68d391">2.91%</div><div class="bar-bg"><div class="bar-fill" style="width:2.91%;background:#68d391"></div></div></div>
+    <div class="rate-card"><div class="rate-label">Reply Rate</div><div class="rate-value" style="color:#a0aec0">0.00%</div><div class="bar-bg"><div class="bar-fill" style="width:0%;background:#a0aec0"></div></div></div>
+    <div class="rate-card"><div class="rate-label">Bounce Rate</div><div class="rate-value" style="color:#fc8181">1.87%</div><div class="bar-bg"><div class="bar-fill" style="width:1.87%;background:#fc8181"></div></div></div>
+    <div class="rate-card"><div class="rate-label">OOO Rate</div><div class="rate-value" style="color:#f6e05e">0.25%</div><div class="bar-bg"><div class="bar-fill" style="width:0.25%;background:#f6e05e"></div></div></div>
+    <div class="rate-card"><div class="rate-label">Booking Rate</div><div class="rate-value" style="color:#b794f4">0.00%</div><div class="bar-bg"><div class="bar-fill" style="width:0%;background:#b794f4"></div></div></div>
   </div>
 
-  <!-- Sequences Overview -->
-  <div class="section-title">Sequences Overview</div>
-  <div class="seq-row">
-    <div class="seq-label"><span class="active-dot"></span>Active Sequences</div>
-    <div class="seq-nums">
-      <div class="seq-num"><div class="n">15</div><div class="l">running</div></div>
-    </div>
-  </div>
-  <div class="seq-row">
-    <div class="seq-label"><span class="inactive-dot"></span>Inactive Sequences</div>
-    <div class="seq-nums">
-      <div class="seq-num"><div class="n">3</div><div class="l">paused</div></div>
-    </div>
-  </div>
-  <div class="seq-row" style="margin-bottom:28px">
-    <div class="seq-label">Total Sequences</div>
-    <div class="seq-nums">
-      <div class="seq-num"><div class="n">18</div><div class="l">all</div></div>
-    </div>
+  <div class="section-title" style="margin-bottom:10px">Sequences Status</div>
+  <div class="seq-row"><div class="seq-label"><span class="active-dot"></span>Active</div><div class="seq-nums"><div class="seq-num"><div class="n">15</div><div class="l">running</div></div></div></div>
+  <div class="seq-row"><div class="seq-label"><span class="inactive-dot"></span>Inactive</div><div class="seq-nums"><div class="seq-num"><div class="n">3</div><div class="l">paused</div></div></div></div>
+  <div class="seq-row" style="margin-bottom:28px"><div class="seq-label">Total</div><div class="seq-nums"><div class="seq-num"><div class="n">18</div><div class="l">all</div></div></div></div>
+
+  <hr class="divider" />
+
+  <!-- ===== PROSP LINKEDIN ===== -->
+  <div class="section-header">
+    <div class="section-icon">💼</div>
+    <div class="section-title">LinkedIn Outreach (Prosp)</div>
   </div>
 
-  <!-- SMS -->
-  <div class="section-title">SMS</div>
-  <div class="sms-row">
-    <div>
-      <div class="sms-label">SMS Sent</div>
-      <div class="sms-val">208</div>
-    </div>
-    <div>
-      <div class="sms-label">SMS Delivery Rate</div>
-      <div class="sms-val">—</div>
-    </div>
-    <div>
-      <div class="sms-label">Pipeline Value</div>
-      <div class="sms-val">$5,000</div>
-    </div>
+  <!-- Summary cards -->
+  <div class="li-summary">
+    <div class="card linkedin"><div class="label">Total Requests</div><div class="value">1,269</div><div class="sub">sent</div></div>
+    <div class="card linkedin"><div class="label">Accepted Invites</div><div class="value">174</div><div class="sub">connections</div></div>
+    <div class="card green"><div class="label">Avg Accept Rate</div><div class="value">13.7%</div><div class="sub">all campaigns</div></div>
+    <div class="card green"><div class="label">Total Replies</div><div class="value">33</div><div class="sub">responses</div></div>
+    <div class="card"><div class="label">Conversations</div><div class="value">146</div><div class="sub">total</div></div>
+    <div class="card"><div class="label">Active Campaigns</div><div class="value">8</div><div class="sub">campaigns</div></div>
   </div>
 
-  <div class="footer">TDM &bull; Mercenary Marketing AI &bull; Data as of <span id="updated2"></span></div>
+  <!-- Per-campaign table -->
+  <div class="li-table-wrap">
+    <table class="li-table">
+      <thead>
+        <tr>
+          <th>Campaign</th>
+          <th>Requests</th>
+          <th>Convos</th>
+          <th>Accepted</th>
+          <th>Accept Rate</th>
+          <th>Replies</th>
+          <th>Reply Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Diana — Manufacturing IT AI</td>
+          <td>165</td><td>13</td><td>19</td>
+          <td><span class="rate-mid">11.5%</span></td>
+          <td>5</td>
+          <td><span class="rate-hi">38.5%</span></td>
+        </tr>
+        <tr>
+          <td>Diana — Manufacturing IT De</td>
+          <td>165</td><td>4</td><td>6</td>
+          <td><span class="rate-lo">3.6%</span></td>
+          <td>0</td>
+          <td><span class="rate-lo">0.0%</span></td>
+        </tr>
+        <tr>
+          <td>Chris — Prof Services IT</td>
+          <td>236</td><td>61</td><td>75</td>
+          <td><span class="rate-hi">31.8%</span></td>
+          <td>20</td>
+          <td><span class="rate-mid">8.5%</span></td>
+        </tr>
+        <tr>
+          <td>Robert — Mfg IT CIOs</td>
+          <td>123</td><td>14</td><td>15</td>
+          <td><span class="rate-mid">12.2%</span></td>
+          <td>1</td>
+          <td><span class="rate-mid">7.1%</span></td>
+        </tr>
+        <tr>
+          <td>Ed — Multi-Site Retail Franchise</td>
+          <td>196</td><td>28</td><td>28</td>
+          <td><span class="rate-mid">14.3%</span></td>
+          <td>2</td>
+          <td><span class="rate-lo">1.0%</span></td>
+        </tr>
+        <tr>
+          <td>Robert — AI Intent Enterprise</td>
+          <td>113</td><td>10</td><td>11</td>
+          <td><span class="rate-mid">9.7%</span></td>
+          <td>1</td>
+          <td><span class="rate-mid">10.0%</span></td>
+        </tr>
+        <tr>
+          <td>Ed — AI Intent Comm Channel</td>
+          <td>147</td><td>8</td><td>11</td>
+          <td><span class="rate-lo">7.5%</span></td>
+          <td>3</td>
+          <td><span class="rate-lo">2.0%</span></td>
+        </tr>
+        <tr>
+          <td>Chris — AI Intent IT Leaders</td>
+          <td>124</td><td>8</td><td>9</td>
+          <td><span class="rate-lo">7.3%</span></td>
+          <td>1</td>
+          <td><span class="rate-lo">0.8%</span></td>
+        </tr>
+        <tr class="totals-row">
+          <td>TOTALS</td>
+          <td>1,269</td><td>146</td><td>174</td>
+          <td>13.7%</td>
+          <td>33</td>
+          <td>19.0%*</td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="font-size:0.68rem;color:#4a5568;margin-top:8px;">* Reply rate = replies / accepted invites (174). Rate color: <span class="rate-hi">green &ge;15%</span> &bull; <span class="rate-mid">yellow 5&ndash;15%</span> &bull; <span class="rate-lo">red &lt;5%</span></div>
+  </div>
+
+  <div class="footer">TDM &bull; Mercenary Marketing AI &bull; Updated <span id="updated2"></span></div>
 </div>
 
 <script>
