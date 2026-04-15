@@ -1,1 +1,316 @@
-<h1>TDM Dashboard Test</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TDM Sequence Performance Dashboard</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #0f1117;
+      color: #e2e8f0;
+      min-height: 100vh;
+      padding: 32px 16px;
+    }
+    .container { max-width: 960px; margin: 0 auto; }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .header h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.5px;
+    }
+    .header .subtitle {
+      font-size: 0.85rem;
+      color: #718096;
+      margin-top: 4px;
+    }
+    .badge {
+      background: #1a1f2e;
+      border: 1px solid #2d3748;
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 0.78rem;
+      color: #63b3ed;
+      white-space: nowrap;
+    }
+    .badge span { font-weight: 700; }
+    .section-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #4a5568;
+      margin-bottom: 14px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .card {
+      background: #1a1f2e;
+      border: 1px solid #2d3748;
+      border-radius: 12px;
+      padding: 20px 18px;
+      transition: border-color 0.2s;
+    }
+    .card:hover { border-color: #4a90d9; }
+    .card .label {
+      font-size: 0.72rem;
+      color: #718096;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 8px;
+    }
+    .card .value {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1;
+    }
+    .card .sub {
+      font-size: 0.78rem;
+      color: #4a5568;
+      margin-top: 6px;
+    }
+    .card.highlight .value { color: #63b3ed; }
+    .card.green .value { color: #68d391; }
+    .card.yellow .value { color: #f6e05e; }
+    .card.red .value { color: #fc8181; }
+    .rates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .rate-card {
+      background: #1a1f2e;
+      border: 1px solid #2d3748;
+      border-radius: 12px;
+      padding: 18px;
+    }
+    .rate-card .rate-label {
+      font-size: 0.72rem;
+      color: #718096;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 10px;
+    }
+    .rate-card .rate-value {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .bar-bg {
+      background: #2d3748;
+      border-radius: 4px;
+      height: 6px;
+      width: 100%;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.6s ease;
+    }
+    .seq-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #1a1f2e;
+      border: 1px solid #2d3748;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-bottom: 10px;
+    }
+    .seq-row .seq-label { font-size: 0.85rem; color: #a0aec0; }
+    .seq-row .seq-nums { display: flex; gap: 20px; }
+    .seq-row .seq-num { text-align: right; }
+    .seq-row .seq-num .n { font-size: 1.1rem; font-weight: 700; color: #fff; }
+    .seq-row .seq-num .l { font-size: 0.68rem; color: #4a5568; text-transform: uppercase; }
+    .active-dot {
+      display: inline-block;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #68d391;
+      margin-right: 7px;
+      vertical-align: middle;
+    }
+    .inactive-dot {
+      display: inline-block;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #fc8181;
+      margin-right: 7px;
+      vertical-align: middle;
+    }
+    .footer {
+      margin-top: 36px;
+      text-align: center;
+      font-size: 0.72rem;
+      color: #2d3748;
+    }
+    .sms-row {
+      background: #1a1f2e;
+      border: 1px solid #2d3748;
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .sms-row .sms-label { font-size: 0.78rem; color: #718096; }
+    .sms-row .sms-val { font-size: 1.2rem; font-weight: 700; color: #b794f4; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div>
+      <h1>TDM Sequence Performance</h1>
+      <div class="subtitle">All-time aggregate metrics &mdash; TDM Company</div>
+    </div>
+    <div class="badge">Last updated: <span id="updated"></span></div>
+  </div>
+
+  <!-- Volume KPIs -->
+  <div class="section-title">Volume</div>
+  <div class="grid">
+    <div class="card highlight">
+      <div class="label">Total Sent</div>
+      <div class="value">3,537</div>
+      <div class="sub">executions</div>
+    </div>
+    <div class="card green">
+      <div class="label">Unique Opens</div>
+      <div class="value">119</div>
+      <div class="sub">contacts</div>
+    </div>
+    <div class="card green">
+      <div class="label">Unique Clicks</div>
+      <div class="value">103</div>
+      <div class="sub">contacts</div>
+    </div>
+    <div class="card">
+      <div class="label">Unique Replies</div>
+      <div class="value">0</div>
+      <div class="sub">contacts</div>
+    </div>
+    <div class="card">
+      <div class="label">Meetings Booked</div>
+      <div class="value">0</div>
+      <div class="sub">bookings</div>
+    </div>
+    <div class="card red">
+      <div class="label">Bounces</div>
+      <div class="value">66</div>
+      <div class="sub">emails</div>
+    </div>
+    <div class="card yellow">
+      <div class="label">Out of Office</div>
+      <div class="value">9</div>
+      <div class="sub">contacts</div>
+    </div>
+    <div class="card">
+      <div class="label">Pending Approvals</div>
+      <div class="value">1</div>
+      <div class="sub">awaiting</div>
+    </div>
+  </div>
+
+  <!-- Rates -->
+  <div class="section-title">Engagement Rates</div>
+  <div class="rates-grid">
+    <div class="rate-card">
+      <div class="rate-label">Open Rate</div>
+      <div class="rate-value" style="color:#63b3ed">3.36%</div>
+      <div class="bar-bg"><div class="bar-fill" style="width:3.36%;background:#63b3ed"></div></div>
+    </div>
+    <div class="rate-card">
+      <div class="rate-label">Click Rate</div>
+      <div class="rate-value" style="color:#68d391">2.91%</div>
+      <div class="bar-bg"><div class="bar-fill" style="width:2.91%;background:#68d391"></div></div>
+    </div>
+    <div class="rate-card">
+      <div class="rate-label">Reply Rate</div>
+      <div class="rate-value" style="color:#a0aec0">0.00%</div>
+      <div class="bar-bg"><div class="bar-fill" style="width:0%;background:#a0aec0"></div></div>
+    </div>
+    <div class="rate-card">
+      <div class="rate-label">Bounce Rate</div>
+      <div class="rate-value" style="color:#fc8181">1.87%</div>
+      <div class="bar-bg"><div class="bar-fill" style="width:1.87%;background:#fc8181"></div></div>
+    </div>
+    <div class="rate-card">
+      <div class="rate-label">OOO Rate</div>
+      <div class="rate-value" style="color:#f6e05e">0.25%</div>
+      <div class="bar-bg"><div class="bar-fill" style="width:0.25%;background:#f6e05e"></div></div>
+    </div>
+    <div class="rate-card">
+      <div class="rate-label">Booking Rate</div>
+      <div class="rate-value" style="color:#b794f4">0.00%</div>
+      <div class="bar-bg"><div class="bar-fill" style="width:0%;background:#b794f4"></div></div>
+    </div>
+  </div>
+
+  <!-- Sequences Overview -->
+  <div class="section-title">Sequences Overview</div>
+  <div class="seq-row">
+    <div class="seq-label"><span class="active-dot"></span>Active Sequences</div>
+    <div class="seq-nums">
+      <div class="seq-num"><div class="n">15</div><div class="l">running</div></div>
+    </div>
+  </div>
+  <div class="seq-row">
+    <div class="seq-label"><span class="inactive-dot"></span>Inactive Sequences</div>
+    <div class="seq-nums">
+      <div class="seq-num"><div class="n">3</div><div class="l">paused</div></div>
+    </div>
+  </div>
+  <div class="seq-row" style="margin-bottom:28px">
+    <div class="seq-label">Total Sequences</div>
+    <div class="seq-nums">
+      <div class="seq-num"><div class="n">18</div><div class="l">all</div></div>
+    </div>
+  </div>
+
+  <!-- SMS -->
+  <div class="section-title">SMS</div>
+  <div class="sms-row">
+    <div>
+      <div class="sms-label">SMS Sent</div>
+      <div class="sms-val">208</div>
+    </div>
+    <div>
+      <div class="sms-label">SMS Delivery Rate</div>
+      <div class="sms-val">—</div>
+    </div>
+    <div>
+      <div class="sms-label">Pipeline Value</div>
+      <div class="sms-val">$5,000</div>
+    </div>
+  </div>
+
+  <div class="footer">TDM &bull; Mercenary Marketing AI &bull; Data as of <span id="updated2"></span></div>
+</div>
+
+<script>
+  const now = new Date().toLocaleString('en-US', { timeZone: 'America/New_York', month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true });
+  document.getElementById('updated').textContent = now;
+  document.getElementById('updated2').textContent = now;
+</script>
+</body>
+</html>
