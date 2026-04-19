@@ -1,87 +1,33 @@
 {
-  "updated": "April 12, 2026",
-  "total_conversations": 38,
+  "updated": "April 19, 2026",
+  "total_conversations": 2,
   "topics": [
     {
-      "emoji": "\ud83d\udcda",
-      "title": "General Parenting Questions",
-      "count": 15,
-      "pct": 39,
-      "description": "First-time parent questions, getting started with ParentAI, and general guidance",
-      "tags": [
-        "First-Time Parents",
-        "Getting Started",
-        "General Advice"
-      ],
-      "accent": "#10c2a9"
-    },
-    {
-      "emoji": "\ud83e\uddf7",
+      "emoji": "🫺",
       "title": "Infant & Baby Health",
-      "count": 9,
-      "pct": 24,
-      "description": "Fever in newborns, nasal congestion, coughs, sore throats, and when to seek care",
+      "count": 1,
+      "pct": 50,
+      "description": "Nasal congestion in children, telehealth providers, and product recommendations",
       "tags": [
-        "Newborn Fever",
         "Congestion",
-        "Cough & Cold",
-        "Ear Care"
+        "Telehealth",
+        "Symptom Guidance",
+        "Products"
       ],
       "accent": "#da3c77"
     },
     {
-      "emoji": "\ud83c\udfe5",
-      "title": "Birth Prep & Hospital",
-      "count": 6,
-      "pct": 16,
-      "description": "Hospital bag essentials, labor timelines, delivery questions, and going-home ready",
+      "emoji": "👤",
+      "title": "Human Handoff / Live Support",
+      "count": 1,
+      "pct": 50,
+      "description": "Voice callers requesting to speak with a human specialist",
       "tags": [
-        "Hospital Bag",
-        "Labor & Delivery",
-        "Postpartum Prep"
+        "Human Transfer",
+        "Support",
+        "Escalation"
       ],
-      "accent": "#da3c77"
-    },
-    {
-      "emoji": "\ud83c\udf7c",
-      "title": "Feeding & Nutrition",
-      "count": 4,
-      "pct": 11,
-      "description": "Breastfeeding challenges, nasal suction, and identifying food allergies in children",
-      "tags": [
-        "Breastfeeding",
-        "Bottle Feeding",
-        "Allergies",
-        "Nasal Suction"
-      ],
-      "accent": "#10c2a9"
-    },
-    {
-      "emoji": "\ud83d\ude34",
-      "title": "Sleep & Soothing",
-      "count": 2,
-      "pct": 5,
-      "description": "Nap schedules, bedwetting, night fussiness, and calming babies",
-      "tags": [
-        "Nap Schedules",
-        "Bedwetting",
-        "Night Fussiness",
-        "Newborn Sleep"
-      ],
-      "accent": "#10c2a9"
-    },
-    {
-      "emoji": "\ud83e\udde0",
-      "title": "Child Development & Behavior",
-      "count": 2,
-      "pct": 5,
-      "description": "Supporting children with anxiety, Down syndrome, and developmental milestones",
-      "tags": [
-        "Anxiety",
-        "Down Syndrome",
-        "Early Intervention"
-      ],
-      "accent": "#da3c77"
+      "accent": "#1b5f7a"
     }
   ],
   "word_cloud": [
@@ -91,98 +37,38 @@
       "color": "#da3c77"
     },
     {
-      "word": "Hospital Bag",
+      "word": "Telehealth",
       "weight": 7,
       "color": "#1b5f7a"
     },
     {
-      "word": "Anxiety",
+      "word": "Human Support",
+      "weight": 7,
+      "color": "#10c2a9"
+    },
+    {
+      "word": "Health",
       "weight": 6,
-      "color": "#10c2a9"
-    },
-    {
-      "word": "Newborn Fever",
-      "weight": 5,
       "color": "#da3c77"
     },
     {
-      "word": "Breastfeeding",
+      "word": "Pediatric",
       "weight": 5,
       "color": "#1b5f7a"
     },
     {
-      "word": "Labor & Delivery",
+      "word": "Products",
       "weight": 5,
       "color": "#10c2a9"
     },
     {
-      "word": "Nap Schedules",
+      "word": "Transfer",
       "weight": 4,
       "color": "#da3c77"
     },
     {
-      "word": "Cough & Cold",
-      "weight": 4,
-      "color": "#1b5f7a"
-    },
-    {
-      "word": "Bedwetting",
+      "word": "Kid",
       "weight": 3,
-      "color": "#10c2a9"
-    },
-    {
-      "word": "Allergies",
-      "weight": 3,
-      "color": "#da3c77"
-    },
-    {
-      "word": "Nose Suction",
-      "weight": 3,
-      "color": "#1b5f7a"
-    },
-    {
-      "word": "Sore Throat",
-      "weight": 3,
-      "color": "#10c2a9"
-    },
-    {
-      "word": "Blood in Stool",
-      "weight": 2,
-      "color": "#da3c77"
-    },
-    {
-      "word": "Down Syndrome",
-      "weight": 2,
-      "color": "#1b5f7a"
-    },
-    {
-      "word": "Night Fussiness",
-      "weight": 2,
-      "color": "#10c2a9"
-    },
-    {
-      "word": "First-Time Parents",
-      "weight": 2,
-      "color": "#da3c77"
-    },
-    {
-      "word": "Postpartum Prep",
-      "weight": 2,
-      "color": "#1b5f7a"
-    },
-    {
-      "word": "Telehealth",
-      "weight": 1,
-      "color": "#10c2a9"
-    },
-    {
-      "word": "Ear Care",
-      "weight": 1,
-      "color": "#da3c77"
-    },
-    {
-      "word": "Pediatrician",
-      "weight": 1,
       "color": "#1b5f7a"
     }
   ]
