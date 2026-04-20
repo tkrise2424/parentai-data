@@ -1,33 +1,107 @@
 {
-  "updated": "April 19, 2026",
-  "total_conversations": 2,
-  "topics": [
+  "generated_at": "2026-04-19T08:20:00-04:00",
+  "week_label": "Week of Apr 13 – Apr 19, 2026",
+  "this_week": {
+    "total_conversations": 2,
+    "topics": [
+      {
+        "emoji": "🫺",
+        "title": "Infant & Baby Health",
+        "count": 1,
+        "pct": 50,
+        "description": "Nasal congestion in children, telehealth providers, and product recommendations",
+        "tags": [
+          "Congestion",
+          "Telehealth",
+          "Symptom Guidance",
+          "Products"
+        ],
+        "accent": "#da3c77"
+      },
+      {
+        "emoji": "👤",
+        "title": "Human Handoff / Live Support",
+        "count": 1,
+        "pct": 50,
+        "description": "Voice callers requesting to speak with a human specialist",
+        "tags": [
+          "Human Transfer",
+          "Support",
+          "Escalation"
+        ],
+        "accent": "#1b5f7a"
+      }
+    ]
+  },
+  "last_week": {
+    "total_conversations": 0,
+    "topics": []
+  },
+  "all_time": {
+    "total_conversations": 2,
+    "topics": [
+      {
+        "emoji": "🫺",
+        "title": "Infant & Baby Health",
+        "count": 1,
+        "pct": 50,
+        "description": "Nasal congestion in children, telehealth providers, and product recommendations",
+        "tags": [
+          "Congestion",
+          "Telehealth",
+          "Symptom Guidance",
+          "Products"
+        ],
+        "accent": "#da3c77"
+      },
+      {
+        "emoji": "👤",
+        "title": "Human Handoff / Live Support",
+        "count": 1,
+        "pct": 50,
+        "description": "Voice callers requesting to speak with a human specialist",
+        "tags": [
+          "Human Transfer",
+          "Support",
+          "Escalation"
+        ],
+        "accent": "#1b5f7a"
+      }
+    ]
+  },
+  "rankings": [
     {
-      "emoji": "🫺",
+      "rank": 1,
+      "prev_rank": null,
+      "trend": "new",
       "title": "Infant & Baby Health",
+      "emoji": "🫺",
       "count": 1,
       "pct": 50,
-      "description": "Nasal congestion in children, telehealth providers, and product recommendations",
+      "accent": "#da3c77",
       "tags": [
         "Congestion",
         "Telehealth",
         "Symptom Guidance",
         "Products"
       ],
-      "accent": "#da3c77"
+      "description": "Nasal congestion in children, telehealth providers, and product recommendations"
     },
     {
-      "emoji": "👤",
+      "rank": 2,
+      "prev_rank": null,
+      "trend": "new",
       "title": "Human Handoff / Live Support",
+      "emoji": "👤",
       "count": 1,
       "pct": 50,
-      "description": "Voice callers requesting to speak with a human specialist",
+      "accent": "#1b5f7a",
       "tags": [
         "Human Transfer",
         "Support",
         "Escalation"
       ],
-      "accent": "#1b5f7a"
+      "description": "Voice callers requesting to speak with a human specialist"
     }
   ],
   "word_cloud": [
