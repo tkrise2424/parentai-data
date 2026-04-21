@@ -76,13 +76,6 @@
 <script>
 const CDN = 'https://cdn.jsdelivr.net/gh/tkrise2424/parentai-data@main/trending.json';
 
-function trendBadge(trend, prevRank, rank) {
-  if (trend === 'new') return '<span class="trend-badge trend-new">🆕 New</span>';
-  if (trend === 'rising') return `<span class="trend-badge trend-rising">🔺 Up ${prevRank - rank}</span>`;
-  if (trend === 'dropping') return `<span class="trend-badge trend-dropping">🔻 Down ${rank - prevRank}</span>`;
-  return '<span class="trend-badge trend-steady">➡️ Steady</span>';
-}
-
 function rankClass(rank) {
   if (rank === 1) return 'top1';
   if (rank === 2) return 'top2';
@@ -93,13 +86,9 @@ function rankClass(rank) {
 function renderApp(data) {
   const app = document.getElementById('app');
   const rankings = data.rankings || [];
-  const thisWeek = data.this_week || {};
   const allTime = data.all_time || {};
   const wordCloud = data.word_cloud || [];
 
-  // Stats row
-  const lastWeekTotal = (data.last_week || {}).total_conversations || 0;
-  const thisWeekTotal = thisWeek.total_conversations || 0;
   const allTimeTotal = allTime.total_conversations || 0;
   const topicsCount = rankings.length;
 
@@ -107,40 +96,25 @@ function renderApp(data) {
     <div class="header">
       <div class="badge"><span>✨ ParentAI Insights</span></div>
       <h1>Trending Topics</h1>
-      <div class="subtitle">What parents are asking about this week</div>
-      <div class="week-label">${data.week_label || ''}</div>
+      <div class="subtitle">What parents are asking about — all time</div>
     </div>
 
     <div class="stats-row">
       <div class="stat-card">
-        <div class="stat-val">${thisWeekTotal}</div>
-        <div class="stat-label">This Week</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-val">${lastWeekTotal}</div>
-        <div class="stat-label">Last Week</div>
-      </div>
-      <div class="stat-card">
         <div class="stat-val">${allTimeTotal}</div>
-        <div class="stat-label">All Time</div>
+        <div class="stat-label">Total Conversations</div>
       </div>
       <div class="stat-card">
         <div class="stat-val">${topicsCount}</div>
-        <div class="stat-label">Topics</div>
+        <div class="stat-label">Topic Categories</div>
       </div>
     </div>
 
-    <div class="section-title">🏆 Power Rankings — This Week</div>
+    <div class="section-title">🏆 Top Topics — All Time</div>
     <div class="rankings">
   `;
 
   rankings.forEach(r => {
-    const prevPct = (() => {
-      const lw = (data.last_week || {}).topics || [];
-      const match = lw.find(t => t.title === r.title);
-      return match ? match.pct : null;
-    })();
-
     html += `
       <div class="rank-card" style="border-left-color:${r.accent}">
         <div class="rank-num ${rankClass(r.rank)}">#${r.rank}</div>
@@ -151,12 +125,6 @@ function renderApp(data) {
           <div class="rank-tags">
             ${(r.tags || []).map(t => `<span class="tag" style="background:${r.accent}">${t}</span>`).join('')}
           </div>
-          ${trendBadge(r.trend, r.prev_rank, r.rank)}
-          ${prevPct !== null ? `
-          <div class="wow-bar-wrap">
-            <div class="wow-bar-label"><span>Last week ${prevPct}%</span><span>This week ${r.pct}%</span></div>
-            <div class="wow-bar-track"><div class="wow-bar-fill" style="width:${r.pct}%;background:${r.accent}"></div></div>
-          </div>` : ''}
         </div>
         <div class="rank-stats">
           <div class="rank-pct">${r.pct}%</div>
