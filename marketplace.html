@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ParentAI Marketplace</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: transparent; padding: 20px; }
+
+  /* Header */
+  .header { text-align: center; margin-bottom: 32px; }
+  .badge { display: inline-block; background: linear-gradient(135deg,#da3c77,#1b5f7a,#10c2a9); border-radius: 50px; padding: 8px 26px; margin-bottom: 16px; }
+  .badge span { color: #fff; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
+  .header h1 { font-size: 28px; font-weight: 800; color: #1a1a2e; margin-bottom: 8px; }
+  .header .subtitle { font-size: 15px; color: #888; line-height: 1.5; }
+
+  /* Category tabs */
+  .tabs { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px; }
+  .tab {
+    padding: 8px 20px; border-radius: 50px; font-size: 13px; font-weight: 700;
+    cursor: pointer; border: 2px solid #eee; background: #fff; color: #888;
+    transition: all 0.2s;
+  }
+  .tab:hover { border-color: #da3c77; color: #da3c77; }
+  .tab.active { background: linear-gradient(135deg,#da3c77,#1b5f7a); border-color: transparent; color: #fff; }
+
+  /* Section */
+  .section { margin-bottom: 40px; }
+  .section-title {
+    font-size: 13px; font-weight: 700; color: #888; letter-spacing: 1.2px;
+    text-transform: uppercase; margin-bottom: 16px; padding-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
+  }
+
+  /* Cards grid */
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+
+  /* Card */
+  .card {
+    background: #fff; border-radius: 16px; overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    transition: box-shadow 0.2s, transform 0.2s;
+    display: flex; flex-direction: column;
+  }
+  .card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.12); transform: translateY(-2px); }
+
+  .card-banner {
+    height: 6px;
+  }
+  .card-body { padding: 18px; flex: 1; display: flex; flex-direction: column; }
+  .card-category {
+    font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+    margin-bottom: 8px; opacity: 0.8;
+  }
+  .card-title { font-size: 17px; font-weight: 800; color: #1a1a2e; margin-bottom: 6px; }
+  .card-desc { font-size: 13px; color: #666; line-height: 1.55; margin-bottom: 14px; flex: 1; }
+
+  .card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 14px; }
+  .card-tag { font-size: 10px; font-weight: 600; padding: 3px 9px; border-radius: 20px; color: #fff; }
+
+  .card-price {
+    font-size: 15px; font-weight: 800; color: #1a1a2e; margin-bottom: 14px;
+  }
+  .card-price span { font-size: 12px; font-weight: 500; color: #aaa; }
+
+  .card-cta {
+    display: block; text-align: center; padding: 11px 20px;
+    border-radius: 50px; font-size: 13px; font-weight: 700;
+    text-decoration: none; color: #fff;
+    transition: opacity 0.2s;
+  }
+  .card-cta:hover { opacity: 0.88; }
+
+  /* Promo badge */
+  .promo-badge {
+    display: inline-block; font-size: 11px; font-weight: 700;
+    padding: 3px 10px; border-radius: 20px; margin-bottom: 10px;
+    background: #fff3cd; color: #856404;
+  }
+
+  .footer { text-align: center; font-size: 11px; color: #ccc; padding-top: 16px; padding-bottom: 4px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge"><span>🛍️ ParentAI Marketplace</span></div>
+  <h1>Trusted Partner Resources</h1>
+  <div class="subtitle">Curated products, services & providers<br>recommended by ParentAI</div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" onclick="filterCards('all', this)">All</div>
+  <div class="tab" onclick="filterCards('product', this)">🛒 Products</div>
+  <div class="tab" onclick="filterCards('service', this)">📚 Services</div>
+  <div class="tab" onclick="filterCards('provider', this)">🩺 Providers</div>
+</div>
+
+<div class="cards" id="cards-container"></div>
+
+<div class="footer">Powered by ParentAI · Partners independently vetted</div>
+
+<script>
+const partners = [
+  {
+    type: "product",
+    name: "NozeBot Baby Nasal Aspirator",
+    brand: "Dr. Noze Best",
+    desc: "Hospital-grade electric nasal aspirator designed by a pediatric ENT. Cordless, rechargeable, with 3 suction levels to safely clear congestion in seconds.",
+    tags: ["Congestion Relief", "Newborn", "ENT-Designed"],
+    price: "From $49",
+    promo: "Use code PARENTAI26 for a discount",
+    accent: "#da3c77",
+    cta: "Shop Now",
+    url: "https://drnozebest.com/collections/the-dr-noze-best-collection"
+  },
+  {
+    type: "service",
+    name: "Pocketcards",
+    brand: "Nascend",
+    desc: "Vinyl pocket-sized reference cards covering newborn care essentials — bonding, feeding, trauma-informed care, and more. Perfect for new parents and caregivers.",
+    tags: ["Newborn Care", "Reference Guide", "Portable"],
+    price: "$29.99",
+    promo: null,
+    accent: "#10c2a9",
+    cta: "Learn More",
+    url: "https://nascend.com/pocketcards/"
+  },
+  {
+    type: "service",
+    name: "Nearly Newborn",
+    brand: "Prenatal Prep Courses",
+    desc: "Step-by-step online courses for expecting parents covering diapering, bathing, swaddling, soothing & feeding prep — with video lessons and a digital parenting assistant.",
+    tags: ["Prenatal Prep", "Online Course", "New Parents"],
+    price: "Free – $49.99",
+    promo: null,
+    accent: "#f59e0b",
+    cta: "Enroll Free",
+    url: "https://www.nearlynewborn.com/enroll"
+  },
+  {
+    type: "provider",
+    name: "Direct Pediatrics",
+    brand: "Direct Primary Care",
+    desc: "Membership-based pediatric care with 24/7 access to your child's doctor via phone, text, or video. No copays, no insurance runaround — just great care.",
+    tags: ["24/7 Access", "No Copays", "Membership"],
+    price: "$165/mo per child",
+    promo: null,
+    accent: "#1b5f7a",
+    cta: "Enroll Now",
+    url: "https://directpediatrics.com/enrollment"
+  },
+  {
+    type: "provider",
+    name: "Blueberry Pediatrics",
+    brand: "Telehealth",
+    desc: "On-demand telehealth visits with board-certified pediatricians, available 24/7. Includes an at-home medical kit for remote diagnosis — no copays, no waiting rooms.",
+    tags: ["Telehealth", "24/7", "Board-Certified"],
+    price: "$18–$29/mo",
+    promo: null,
+    accent: "#059669",
+    cta: "Join Now",
+    url: "https://app.blueberrypediatrics.com/bbjoin/"
+  },
+  {
+    type: "provider",
+    name: "Hearts Connected",
+    brand: "Child Life & Mental Health",
+    desc: "Virtual mental health support for children ages 4+ and their families. No waitlist, available 7 days a week nationwide. Specialists in grief, health challenges & anxiety.",
+    tags: ["Mental Health", "Virtual", "No Waitlist"],
+    price: "Self-pay / HSA eligible",
+    promo: null,
+    accent: "#7c3aed",
+    cta: "Get Support",
+    url: "https://www.heartsconnected.org/"
+  }
+];
+
+let currentFilter = 'all';
+
+function filterCards(type, el) {
+  currentFilter = type;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  renderCards();
+  setTimeout(() => {
+    window.parent.postMessage({ type: 'pai-height', height: document.body.scrollHeight }, '*');
+  }, 150);
+}
+
+function renderCards() {
+  const container = document.getElementById('cards-container');
+  const filtered = currentFilter === 'all' ? partners : partners.filter(p => p.type === currentFilter);
+
+  container.innerHTML = filtered.map(p => `
+    <div class="card" data-type="${p.type}">
+      <div class="card-banner" style="background:${p.accent}"></div>
+      <div class="card-body">
+        <div class="card-category" style="color:${p.accent}">${
+          p.type === 'product' ? '🛒 Product' :
+          p.type === 'service' ? '📚 Service' : '🩺 Provider'
+        } · ${p.brand}</div>
+        <div class="card-title">${p.name}</div>
+        <div class="card-desc">${p.desc}</div>
+        <div class="card-tags">
+          ${p.tags.map(t => `<span class="card-tag" style="background:${p.accent}">${t}</span>`).join('')}
+        </div>
+        ${p.promo ? `<div class="promo-badge">🏷️ ${p.promo}</div>` : ''}
+        <div class="card-price">${p.price} <span>· ${p.type === 'product' ? 'one-time' : p.type === 'service' ? 'one-time / free tier' : 'subscription'}</span></div>
+        <a class="card-cta" href="${p.url}" target="_blank" style="background:${p.accent}">${p.cta} →</a>
+      </div>
+    </div>
+  `).join('');
+}
+
+renderCards();
+
+setTimeout(() => {
+  window.parent.postMessage({ type: 'pai-height', height: document.body.scrollHeight }, '*');
+}, 300);
+</script>
+</body>
+</html>
