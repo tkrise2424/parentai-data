@@ -1,71 +1,70 @@
 {
-  "generated_at": "2026-04-19T08:20:00-04:00",
-  "week_label": "Week of Apr 13 – Apr 19, 2026",
-  "this_week": {
-    "total_conversations": 2,
-    "topics": [
-      {
-        "emoji": "🫺",
-        "title": "Infant & Baby Health",
-        "count": 1,
-        "pct": 50,
-        "description": "Nasal congestion in children, telehealth providers, and product recommendations",
-        "tags": [
-          "Congestion",
-          "Telehealth",
-          "Symptom Guidance",
-          "Products"
-        ],
-        "accent": "#da3c77"
-      },
-      {
-        "emoji": "👤",
-        "title": "Human Handoff / Live Support",
-        "count": 1,
-        "pct": 50,
-        "description": "Voice callers requesting to speak with a human specialist",
-        "tags": [
-          "Human Transfer",
-          "Support",
-          "Escalation"
-        ],
-        "accent": "#1b5f7a"
-      }
-    ]
-  },
-  "last_week": {
-    "total_conversations": 0,
-    "topics": []
-  },
+  "generated_at": "2026-04-21T05:04:00-04:00",
   "all_time": {
-    "total_conversations": 2,
+    "total_conversations": 42,
     "topics": [
       {
-        "emoji": "🫺",
-        "title": "Infant & Baby Health",
-        "count": 1,
-        "pct": 50,
-        "description": "Nasal congestion in children, telehealth providers, and product recommendations",
-        "tags": [
-          "Congestion",
-          "Telehealth",
-          "Symptom Guidance",
-          "Products"
-        ],
-        "accent": "#da3c77"
+        "emoji": "🤒",
+        "title": "Child Health & Symptoms",
+        "count": 12,
+        "pct": 29,
+        "description": "Parents seeking advice on respiratory issues, fever, congestion, cough, allergies, and other pediatric symptoms.",
+        "tags": ["Congestion", "Fever", "Cough", "Allergies", "Symptoms"],
+        "accent": "#1b5f7a"
+      },
+      {
+        "emoji": "🏥",
+        "title": "Birth & Hospital Prep",
+        "count": 7,
+        "pct": 17,
+        "description": "Expecting parents asking about hospital bags, labor timelines, delivery questions, and post-birth transitions.",
+        "tags": ["Hospital", "Delivery", "Newborn", "Postpartum"],
+        "accent": "#f59e0b"
       },
       {
         "emoji": "👤",
         "title": "Human Handoff / Live Support",
-        "count": 1,
-        "pct": 50,
-        "description": "Voice callers requesting to speak with a human specialist",
-        "tags": [
-          "Human Transfer",
-          "Support",
-          "Escalation"
-        ],
-        "accent": "#1b5f7a"
+        "count": 7,
+        "pct": 17,
+        "description": "Parents explicitly requesting to be transferred to a human representative or live support specialist.",
+        "tags": ["Human Transfer", "Support", "Escalation", "Live Agent"],
+        "accent": "#7c3aed"
+      },
+      {
+        "emoji": "🍼",
+        "title": "Infant & Baby Care",
+        "count": 6,
+        "pct": 14,
+        "description": "Questions about feeding, breastfeeding, sleep schedules, hydration, and care for newborns and infants.",
+        "tags": ["Breastfeeding", "Sleep", "Feeding", "Newborn"],
+        "accent": "#da3c77"
+      },
+      {
+        "emoji": "🔍",
+        "title": "Product & Service Inquiry",
+        "count": 4,
+        "pct": 10,
+        "description": "Parents asking about recommended products, promo codes, and what ParentAI offers versus other tools.",
+        "tags": ["Products", "NozeBot", "Promo", "About ParentAI"],
+        "accent": "#059669"
+      },
+      {
+        "emoji": "🧠",
+        "title": "Child Mental Health",
+        "count": 3,
+        "pct": 7,
+        "description": "Parents concerned about anxiety, emotional distress, and behavioral issues in their children.",
+        "tags": ["Anxiety", "Emotions", "Mental Health", "Behavior"],
+        "accent": "#10c2a9"
+      },
+      {
+        "emoji": "🩺",
+        "title": "Urgent Symptom Triage",
+        "count": 3,
+        "pct": 7,
+        "description": "Parents with urgent concerns like blood in stool, high fever in newborns, and infected wounds seeking immediate guidance.",
+        "tags": ["Urgent", "Emergency", "Triage", "Serious Symptoms"],
+        "accent": "#dc2626"
       }
     ]
   },
@@ -73,77 +72,100 @@
     {
       "rank": 1,
       "prev_rank": null,
-      "trend": "new",
-      "title": "Infant & Baby Health",
-      "emoji": "🫺",
-      "count": 1,
-      "pct": 50,
-      "accent": "#da3c77",
-      "tags": [
-        "Congestion",
-        "Telehealth",
-        "Symptom Guidance",
-        "Products"
-      ],
-      "description": "Nasal congestion in children, telehealth providers, and product recommendations"
+      "trend": "steady",
+      "title": "Child Health & Symptoms",
+      "emoji": "🤒",
+      "count": 12,
+      "pct": 29,
+      "accent": "#1b5f7a",
+      "tags": ["Congestion", "Fever", "Cough", "Allergies", "Symptoms"],
+      "description": "Parents seeking advice on respiratory issues, fever, congestion, cough, allergies, and other pediatric symptoms."
     },
     {
       "rank": 2,
       "prev_rank": null,
-      "trend": "new",
+      "trend": "steady",
+      "title": "Birth & Hospital Prep",
+      "emoji": "🏥",
+      "count": 7,
+      "pct": 17,
+      "accent": "#f59e0b",
+      "tags": ["Hospital", "Delivery", "Newborn", "Postpartum"],
+      "description": "Expecting parents asking about hospital bags, labor timelines, delivery questions, and post-birth transitions."
+    },
+    {
+      "rank": 3,
+      "prev_rank": null,
+      "trend": "steady",
       "title": "Human Handoff / Live Support",
       "emoji": "👤",
-      "count": 1,
-      "pct": 50,
-      "accent": "#1b5f7a",
-      "tags": [
-        "Human Transfer",
-        "Support",
-        "Escalation"
-      ],
-      "description": "Voice callers requesting to speak with a human specialist"
+      "count": 7,
+      "pct": 17,
+      "accent": "#7c3aed",
+      "tags": ["Human Transfer", "Support", "Escalation", "Live Agent"],
+      "description": "Parents explicitly requesting to be transferred to a human representative or live support specialist."
+    },
+    {
+      "rank": 4,
+      "prev_rank": null,
+      "trend": "steady",
+      "title": "Infant & Baby Care",
+      "emoji": "🍼",
+      "count": 6,
+      "pct": 14,
+      "accent": "#da3c77",
+      "tags": ["Breastfeeding", "Sleep", "Feeding", "Newborn"],
+      "description": "Questions about feeding, breastfeeding, sleep schedules, hydration, and care for newborns and infants."
+    },
+    {
+      "rank": 5,
+      "prev_rank": null,
+      "trend": "steady",
+      "title": "Product & Service Inquiry",
+      "emoji": "🔍",
+      "count": 4,
+      "pct": 10,
+      "accent": "#059669",
+      "tags": ["Products", "NozeBot", "Promo", "About ParentAI"],
+      "description": "Parents asking about recommended products, promo codes, and what ParentAI offers versus other tools."
+    },
+    {
+      "rank": 6,
+      "prev_rank": null,
+      "trend": "steady",
+      "title": "Child Mental Health",
+      "emoji": "🧠",
+      "count": 3,
+      "pct": 7,
+      "accent": "#10c2a9",
+      "tags": ["Anxiety", "Emotions", "Mental Health", "Behavior"],
+      "description": "Parents concerned about anxiety, emotional distress, and behavioral issues in their children."
+    },
+    {
+      "rank": 7,
+      "prev_rank": null,
+      "trend": "steady",
+      "title": "Urgent Symptom Triage",
+      "emoji": "🩺",
+      "count": 3,
+      "pct": 7,
+      "accent": "#dc2626",
+      "tags": ["Urgent", "Emergency", "Triage", "Serious Symptoms"],
+      "description": "Parents with urgent concerns like blood in stool, high fever in newborns, and infected wounds seeking immediate guidance."
     }
   ],
   "word_cloud": [
-    {
-      "word": "Nasal Congestion",
-      "weight": 8,
-      "color": "#da3c77"
-    },
-    {
-      "word": "Telehealth",
-      "weight": 7,
-      "color": "#1b5f7a"
-    },
-    {
-      "word": "Human Support",
-      "weight": 7,
-      "color": "#10c2a9"
-    },
-    {
-      "word": "Health",
-      "weight": 6,
-      "color": "#da3c77"
-    },
-    {
-      "word": "Pediatric",
-      "weight": 5,
-      "color": "#1b5f7a"
-    },
-    {
-      "word": "Products",
-      "weight": 5,
-      "color": "#10c2a9"
-    },
-    {
-      "word": "Transfer",
-      "weight": 4,
-      "color": "#da3c77"
-    },
-    {
-      "word": "Kid",
-      "weight": 3,
-      "color": "#1b5f7a"
-    }
+    { "word": "Nasal Congestion", "weight": 9, "color": "#1b5f7a" },
+    { "word": "Fever", "weight": 7, "color": "#dc2626" },
+    { "word": "Breastfeeding", "weight": 7, "color": "#da3c77" },
+    { "word": "Hospital Bag", "weight": 6, "color": "#f59e0b" },
+    { "word": "Human Support", "weight": 6, "color": "#7c3aed" },
+    { "word": "Anxiety", "weight": 5, "color": "#10c2a9" },
+    { "word": "Cough", "weight": 5, "color": "#1b5f7a" },
+    { "word": "Newborn", "weight": 5, "color": "#da3c77" },
+    { "word": "Delivery", "weight": 4, "color": "#f59e0b" },
+    { "word": "Allergies", "weight": 4, "color": "#059669" },
+    { "word": "Sleep", "weight": 3, "color": "#da3c77" },
+    { "word": "Pediatric", "weight": 3, "color": "#1b5f7a" }
   ]
 }
