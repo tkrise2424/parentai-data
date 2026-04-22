@@ -74,6 +74,8 @@ def generate_embed_html(data):
 @media(max-width:680px){{
   .pai-grid{{grid-template-columns:1fr!important;}}
   #pai-wrap h2{{font-size:28px!important;}}
+  .pai-ww{{font-size:16px!important;margin:4px 5px!important;}}
+  #pai-wrap div[style*="padding:36px"]{{padding:20px 12px!important;}}
 }}
 </style>
 <div id="pai-wrap">
@@ -86,7 +88,7 @@ def generate_embed_html(data):
   </div>
   <div style="background:linear-gradient(135deg,#fdf4f8,#f0faf9);border-radius:20px;padding:36px 28px;margin-bottom:40px;text-align:center;border:1px solid #f0e0e8;">
     <div style="font-size:13px;font-weight:700;color:#da3c77;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;">&#128269; Conversation Word Cloud</div>
-    <div style="line-height:2;">
+    <div style="line-height:2;overflow-wrap:break-word;word-break:break-word;">
 {word_cloud_items}    </div>
   </div>
   <div style="display:flex;gap:16px;margin-bottom:40px;flex-wrap:wrap;">
