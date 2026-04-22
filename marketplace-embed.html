@@ -4,6 +4,7 @@
 #pam-wrap{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;max-width:1100px;margin:0 auto;padding:40px 20px;box-sizing:border-box;}
 #pam-wrap *{box-sizing:border-box;}
 .pam-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;}
+.pam-card-wrap{display:block;}
 .pam-tab{padding:8px 20px;border-radius:50px;font-size:13px;font-weight:700;cursor:pointer;border:2px solid #eee;background:#fff;color:#888;transition:all 0.2s;}
 .pam-tab:hover{border-color:#da3c77;color:#da3c77;}
 .pam-tab.pam-active{background:linear-gradient(135deg,#da3c77,#1b5f7a);border-color:transparent;color:#fff;}
@@ -27,76 +28,88 @@
     <button class="pam-tab" onclick="pamFilter('provider',this)">🩺 Providers</button>
   </div>
   <div class="pam-grid" id="pam-grid">
-<div class="pam-card" data-type="product" style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.07);display:flex;flex-direction:column;transition:box-shadow 0.2s,transform 0.2s;" onmouseover="this.style.boxShadow='0 6px 24px rgba(0,0,0,0.12)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.07)';this.style.transform='translateY(0)'">
-  <div style="height:6px;background:#da3c77"></div>
-  <div style="padding:18px;flex:1;display:flex;flex-direction:column;">
-    <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;color:#da3c77">🛒 Product · Dr. Noze Best</div>
-    <div style="font-size:17px;font-weight:800;color:#1a1a2e;margin-bottom:6px;">NozeBot Baby Nasal Aspirator</div>
-    <div style="font-size:13px;color:#666;line-height:1.55;margin-bottom:14px;flex:1;">Hospital-grade electric nasal aspirator designed by a pediatric ENT. Cordless, rechargeable, with 3 suction levels to safely clear congestion in seconds.</div>
-    <div style="margin-bottom:14px;"><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#da3c77;color:#fff;margin:2px 3px 2px 0;">Congestion Relief</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#da3c77;color:#fff;margin:2px 3px 2px 0;">Newborn</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#da3c77;color:#fff;margin:2px 3px 2px 0;">ENT-Designed</span></div>
-    <div style="display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:10px;background:#fff3cd;color:#856404;">🏷️ Use code PARENTAI26 for a discount</div>
-    <div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-bottom:14px;">From $49 <span style="font-size:12px;font-weight:500;color:#aaa;">· one-time</span></div>
-    <a href="https://drnozebest.com/collections/the-dr-noze-best-collection" target="_blank" style="display:block;text-align:center;padding:11px 20px;border-radius:50px;font-size:13px;font-weight:700;text-decoration:none;color:#fff;background:#da3c77;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Shop Now →</a>
+<div class="pam-card-wrap" data-type="product">
+  <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.07);display:flex;flex-direction:column;height:100%;transition:box-shadow 0.2s,transform 0.2s;" onmouseover="this.style.boxShadow='0 6px 24px rgba(0,0,0,0.12)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.07)';this.style.transform='translateY(0)'">
+    <div style="height:6px;background:#da3c77"></div>
+    <div style="padding:18px;flex:1;display:flex;flex-direction:column;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;color:#da3c77">🛒 Product · Dr. Noze Best</div>
+      <div style="font-size:17px;font-weight:800;color:#1a1a2e;margin-bottom:6px;">NozeBot Baby Nasal Aspirator</div>
+      <div style="font-size:13px;color:#666;line-height:1.55;margin-bottom:14px;flex:1;">Hospital-grade electric nasal aspirator designed by a pediatric ENT. Cordless, rechargeable, with 3 suction levels to safely clear congestion in seconds.</div>
+      <div style="margin-bottom:14px;"><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#da3c77;color:#fff;margin:2px 3px 2px 0;">Congestion Relief</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#da3c77;color:#fff;margin:2px 3px 2px 0;">Newborn</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#da3c77;color:#fff;margin:2px 3px 2px 0;">ENT-Designed</span></div>
+      <div style="display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:10px;background:#fff3cd;color:#856404;">🏷️ Use code PARENTAI26 for a discount</div>
+      <div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-bottom:14px;">From $49 <span style="font-size:12px;font-weight:500;color:#aaa;">· one-time</span></div>
+      <a href="https://drnozebest.com/collections/the-dr-noze-best-collection" target="_blank" style="display:block;text-align:center;padding:11px 20px;border-radius:50px;font-size:13px;font-weight:700;text-decoration:none;color:#fff;background:#da3c77;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Shop Now →</a>
+    </div>
   </div>
 </div>
-<div class="pam-card" data-type="service" style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.07);display:flex;flex-direction:column;transition:box-shadow 0.2s,transform 0.2s;" onmouseover="this.style.boxShadow='0 6px 24px rgba(0,0,0,0.12)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.07)';this.style.transform='translateY(0)'">
-  <div style="height:6px;background:#10c2a9"></div>
-  <div style="padding:18px;flex:1;display:flex;flex-direction:column;">
-    <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;color:#10c2a9">📚 Service · Nascend</div>
-    <div style="font-size:17px;font-weight:800;color:#1a1a2e;margin-bottom:6px;">Pocketcards</div>
-    <div style="font-size:13px;color:#666;line-height:1.55;margin-bottom:14px;flex:1;">Vinyl pocket-sized reference cards covering newborn care essentials — bonding, feeding, trauma-informed care, and more. Perfect for new parents and caregivers.</div>
-    <div style="margin-bottom:14px;"><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#10c2a9;color:#fff;margin:2px 3px 2px 0;">Newborn Care</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#10c2a9;color:#fff;margin:2px 3px 2px 0;">Reference Guide</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#10c2a9;color:#fff;margin:2px 3px 2px 0;">Portable</span></div>
-    
-    <div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-bottom:14px;">$29.99 <span style="font-size:12px;font-weight:500;color:#aaa;">· one-time</span></div>
-    <a href="https://nascend.com/pocketcards/" target="_blank" style="display:block;text-align:center;padding:11px 20px;border-radius:50px;font-size:13px;font-weight:700;text-decoration:none;color:#fff;background:#10c2a9;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Learn More →</a>
+<div class="pam-card-wrap" data-type="service">
+  <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.07);display:flex;flex-direction:column;height:100%;transition:box-shadow 0.2s,transform 0.2s;" onmouseover="this.style.boxShadow='0 6px 24px rgba(0,0,0,0.12)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.07)';this.style.transform='translateY(0)'">
+    <div style="height:6px;background:#10c2a9"></div>
+    <div style="padding:18px;flex:1;display:flex;flex-direction:column;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;color:#10c2a9">📚 Service · Nascend</div>
+      <div style="font-size:17px;font-weight:800;color:#1a1a2e;margin-bottom:6px;">Pocketcards</div>
+      <div style="font-size:13px;color:#666;line-height:1.55;margin-bottom:14px;flex:1;">Vinyl pocket-sized reference cards covering newborn care essentials — bonding, feeding, trauma-informed care, and more. Perfect for new parents and caregivers.</div>
+      <div style="margin-bottom:14px;"><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#10c2a9;color:#fff;margin:2px 3px 2px 0;">Newborn Care</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#10c2a9;color:#fff;margin:2px 3px 2px 0;">Reference Guide</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#10c2a9;color:#fff;margin:2px 3px 2px 0;">Portable</span></div>
+      
+      <div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-bottom:14px;">$29.99 <span style="font-size:12px;font-weight:500;color:#aaa;">· one-time</span></div>
+      <a href="https://nascend.com/pocketcards/" target="_blank" style="display:block;text-align:center;padding:11px 20px;border-radius:50px;font-size:13px;font-weight:700;text-decoration:none;color:#fff;background:#10c2a9;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Learn More →</a>
+    </div>
   </div>
 </div>
-<div class="pam-card" data-type="service" style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.07);display:flex;flex-direction:column;transition:box-shadow 0.2s,transform 0.2s;" onmouseover="this.style.boxShadow='0 6px 24px rgba(0,0,0,0.12)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.07)';this.style.transform='translateY(0)'">
-  <div style="height:6px;background:#f59e0b"></div>
-  <div style="padding:18px;flex:1;display:flex;flex-direction:column;">
-    <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;color:#f59e0b">📚 Service · Prenatal Prep Courses</div>
-    <div style="font-size:17px;font-weight:800;color:#1a1a2e;margin-bottom:6px;">Nearly Newborn</div>
-    <div style="font-size:13px;color:#666;line-height:1.55;margin-bottom:14px;flex:1;">Step-by-step online courses for expecting parents covering diapering, bathing, swaddling, soothing & feeding prep — with video lessons and a digital parenting assistant.</div>
-    <div style="margin-bottom:14px;"><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#f59e0b;color:#fff;margin:2px 3px 2px 0;">Prenatal Prep</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#f59e0b;color:#fff;margin:2px 3px 2px 0;">Online Course</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#f59e0b;color:#fff;margin:2px 3px 2px 0;">New Parents</span></div>
-    
-    <div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-bottom:14px;">Free – $49.99 <span style="font-size:12px;font-weight:500;color:#aaa;">· one-time / free tier</span></div>
-    <a href="https://www.nearlynewborn.com/enroll" target="_blank" style="display:block;text-align:center;padding:11px 20px;border-radius:50px;font-size:13px;font-weight:700;text-decoration:none;color:#fff;background:#f59e0b;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Enroll Free →</a>
+<div class="pam-card-wrap" data-type="service">
+  <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.07);display:flex;flex-direction:column;height:100%;transition:box-shadow 0.2s,transform 0.2s;" onmouseover="this.style.boxShadow='0 6px 24px rgba(0,0,0,0.12)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.07)';this.style.transform='translateY(0)'">
+    <div style="height:6px;background:#f59e0b"></div>
+    <div style="padding:18px;flex:1;display:flex;flex-direction:column;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;color:#f59e0b">📚 Service · Prenatal Prep Courses</div>
+      <div style="font-size:17px;font-weight:800;color:#1a1a2e;margin-bottom:6px;">Nearly Newborn</div>
+      <div style="font-size:13px;color:#666;line-height:1.55;margin-bottom:14px;flex:1;">Step-by-step online courses for expecting parents covering diapering, bathing, swaddling, soothing & feeding prep — with video lessons and a digital parenting assistant.</div>
+      <div style="margin-bottom:14px;"><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#f59e0b;color:#fff;margin:2px 3px 2px 0;">Prenatal Prep</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#f59e0b;color:#fff;margin:2px 3px 2px 0;">Online Course</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#f59e0b;color:#fff;margin:2px 3px 2px 0;">New Parents</span></div>
+      
+      <div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-bottom:14px;">Free – $49.99 <span style="font-size:12px;font-weight:500;color:#aaa;">· one-time / free tier</span></div>
+      <a href="https://www.nearlynewborn.com/enroll" target="_blank" style="display:block;text-align:center;padding:11px 20px;border-radius:50px;font-size:13px;font-weight:700;text-decoration:none;color:#fff;background:#f59e0b;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Enroll Free →</a>
+    </div>
   </div>
 </div>
-<div class="pam-card" data-type="provider" style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.07);display:flex;flex-direction:column;transition:box-shadow 0.2s,transform 0.2s;" onmouseover="this.style.boxShadow='0 6px 24px rgba(0,0,0,0.12)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.07)';this.style.transform='translateY(0)'">
-  <div style="height:6px;background:#1b5f7a"></div>
-  <div style="padding:18px;flex:1;display:flex;flex-direction:column;">
-    <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;color:#1b5f7a">🩺 Provider · Direct Primary Care</div>
-    <div style="font-size:17px;font-weight:800;color:#1a1a2e;margin-bottom:6px;">Direct Pediatrics</div>
-    <div style="font-size:13px;color:#666;line-height:1.55;margin-bottom:14px;flex:1;">Membership-based pediatric care with 24/7 access to your child's doctor via phone, text, or video. No copays, no insurance runaround — just great care.</div>
-    <div style="margin-bottom:14px;"><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#1b5f7a;color:#fff;margin:2px 3px 2px 0;">24/7 Access</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#1b5f7a;color:#fff;margin:2px 3px 2px 0;">No Copays</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#1b5f7a;color:#fff;margin:2px 3px 2px 0;">Membership</span></div>
-    
-    <div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-bottom:14px;">$165/mo per child <span style="font-size:12px;font-weight:500;color:#aaa;">· subscription</span></div>
-    <a href="https://directpediatrics.com/enrollment" target="_blank" style="display:block;text-align:center;padding:11px 20px;border-radius:50px;font-size:13px;font-weight:700;text-decoration:none;color:#fff;background:#1b5f7a;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Enroll Now →</a>
+<div class="pam-card-wrap" data-type="provider">
+  <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.07);display:flex;flex-direction:column;height:100%;transition:box-shadow 0.2s,transform 0.2s;" onmouseover="this.style.boxShadow='0 6px 24px rgba(0,0,0,0.12)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.07)';this.style.transform='translateY(0)'">
+    <div style="height:6px;background:#1b5f7a"></div>
+    <div style="padding:18px;flex:1;display:flex;flex-direction:column;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;color:#1b5f7a">🩺 Provider · Direct Primary Care</div>
+      <div style="font-size:17px;font-weight:800;color:#1a1a2e;margin-bottom:6px;">Direct Pediatrics</div>
+      <div style="font-size:13px;color:#666;line-height:1.55;margin-bottom:14px;flex:1;">Membership-based pediatric care with 24/7 access to your child's doctor via phone, text, or video. No copays, no insurance runaround — just great care.</div>
+      <div style="margin-bottom:14px;"><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#1b5f7a;color:#fff;margin:2px 3px 2px 0;">24/7 Access</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#1b5f7a;color:#fff;margin:2px 3px 2px 0;">No Copays</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#1b5f7a;color:#fff;margin:2px 3px 2px 0;">Membership</span></div>
+      
+      <div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-bottom:14px;">$165/mo per child <span style="font-size:12px;font-weight:500;color:#aaa;">· subscription</span></div>
+      <a href="https://directpediatrics.com/enrollment" target="_blank" style="display:block;text-align:center;padding:11px 20px;border-radius:50px;font-size:13px;font-weight:700;text-decoration:none;color:#fff;background:#1b5f7a;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Enroll Now →</a>
+    </div>
   </div>
 </div>
-<div class="pam-card" data-type="provider" style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.07);display:flex;flex-direction:column;transition:box-shadow 0.2s,transform 0.2s;" onmouseover="this.style.boxShadow='0 6px 24px rgba(0,0,0,0.12)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.07)';this.style.transform='translateY(0)'">
-  <div style="height:6px;background:#059669"></div>
-  <div style="padding:18px;flex:1;display:flex;flex-direction:column;">
-    <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;color:#059669">🩺 Provider · Telehealth</div>
-    <div style="font-size:17px;font-weight:800;color:#1a1a2e;margin-bottom:6px;">Blueberry Pediatrics</div>
-    <div style="font-size:13px;color:#666;line-height:1.55;margin-bottom:14px;flex:1;">On-demand telehealth visits with board-certified pediatricians, available 24/7. Includes an at-home medical kit for remote diagnosis — no copays, no waiting rooms.</div>
-    <div style="margin-bottom:14px;"><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#059669;color:#fff;margin:2px 3px 2px 0;">Telehealth</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#059669;color:#fff;margin:2px 3px 2px 0;">24/7</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#059669;color:#fff;margin:2px 3px 2px 0;">Board-Certified</span></div>
-    
-    <div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-bottom:14px;">$18–$29/mo <span style="font-size:12px;font-weight:500;color:#aaa;">· subscription</span></div>
-    <a href="https://app.blueberrypediatrics.com/bbjoin/" target="_blank" style="display:block;text-align:center;padding:11px 20px;border-radius:50px;font-size:13px;font-weight:700;text-decoration:none;color:#fff;background:#059669;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Join Now →</a>
+<div class="pam-card-wrap" data-type="provider">
+  <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.07);display:flex;flex-direction:column;height:100%;transition:box-shadow 0.2s,transform 0.2s;" onmouseover="this.style.boxShadow='0 6px 24px rgba(0,0,0,0.12)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.07)';this.style.transform='translateY(0)'">
+    <div style="height:6px;background:#059669"></div>
+    <div style="padding:18px;flex:1;display:flex;flex-direction:column;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;color:#059669">🩺 Provider · Telehealth</div>
+      <div style="font-size:17px;font-weight:800;color:#1a1a2e;margin-bottom:6px;">Blueberry Pediatrics</div>
+      <div style="font-size:13px;color:#666;line-height:1.55;margin-bottom:14px;flex:1;">On-demand telehealth visits with board-certified pediatricians, available 24/7. Includes an at-home medical kit for remote diagnosis — no copays, no waiting rooms.</div>
+      <div style="margin-bottom:14px;"><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#059669;color:#fff;margin:2px 3px 2px 0;">Telehealth</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#059669;color:#fff;margin:2px 3px 2px 0;">24/7</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#059669;color:#fff;margin:2px 3px 2px 0;">Board-Certified</span></div>
+      
+      <div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-bottom:14px;">$18–$29/mo <span style="font-size:12px;font-weight:500;color:#aaa;">· subscription</span></div>
+      <a href="https://app.blueberrypediatrics.com/bbjoin/" target="_blank" style="display:block;text-align:center;padding:11px 20px;border-radius:50px;font-size:13px;font-weight:700;text-decoration:none;color:#fff;background:#059669;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Join Now →</a>
+    </div>
   </div>
 </div>
-<div class="pam-card" data-type="provider" style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.07);display:flex;flex-direction:column;transition:box-shadow 0.2s,transform 0.2s;" onmouseover="this.style.boxShadow='0 6px 24px rgba(0,0,0,0.12)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.07)';this.style.transform='translateY(0)'">
-  <div style="height:6px;background:#7c3aed"></div>
-  <div style="padding:18px;flex:1;display:flex;flex-direction:column;">
-    <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;color:#7c3aed">🩺 Provider · Child Life & Mental Health</div>
-    <div style="font-size:17px;font-weight:800;color:#1a1a2e;margin-bottom:6px;">Hearts Connected</div>
-    <div style="font-size:13px;color:#666;line-height:1.55;margin-bottom:14px;flex:1;">Virtual mental health support for children ages 4+ and their families. No waitlist, available 7 days a week nationwide. Specialists in grief, health challenges & anxiety.</div>
-    <div style="margin-bottom:14px;"><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#7c3aed;color:#fff;margin:2px 3px 2px 0;">Mental Health</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#7c3aed;color:#fff;margin:2px 3px 2px 0;">Virtual</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#7c3aed;color:#fff;margin:2px 3px 2px 0;">No Waitlist</span></div>
-    
-    <div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-bottom:14px;">Self-pay / HSA eligible <span style="font-size:12px;font-weight:500;color:#aaa;">· subscription</span></div>
-    <a href="https://www.heartsconnected.org/" target="_blank" style="display:block;text-align:center;padding:11px 20px;border-radius:50px;font-size:13px;font-weight:700;text-decoration:none;color:#fff;background:#7c3aed;transition:opacity 0.2s;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Get Support →</a>
+<div class="pam-card-wrap" data-type="provider">
+  <div style="background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.07);display:flex;flex-direction:column;height:100%;transition:box-shadow 0.2s,transform 0.2s;" onmouseover="this.style.boxShadow='0 6px 24px rgba(0,0,0,0.12)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.07)';this.style.transform='translateY(0)'">
+    <div style="height:6px;background:#7c3aed"></div>
+    <div style="padding:18px;flex:1;display:flex;flex-direction:column;">
+      <div style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;color:#7c3aed">🩺 Provider · Child Life & Mental Health</div>
+      <div style="font-size:17px;font-weight:800;color:#1a1a2e;margin-bottom:6px;">Hearts Connected</div>
+      <div style="font-size:13px;color:#666;line-height:1.55;margin-bottom:14px;flex:1;">Virtual mental health support for children ages 4+ and their families. No waitlist, available 7 days a week nationwide. Specialists in grief, health challenges & anxiety.</div>
+      <div style="margin-bottom:14px;"><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#7c3aed;color:#fff;margin:2px 3px 2px 0;">Mental Health</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#7c3aed;color:#fff;margin:2px 3px 2px 0;">Virtual</span><span style="display:inline-block;font-size:10px;font-weight:600;padding:3px 9px;border-radius:20px;background:#7c3aed;color:#fff;margin:2px 3px 2px 0;">No Waitlist</span></div>
+      
+      <div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-bottom:14px;">Self-pay / HSA eligible <span style="font-size:12px;font-weight:500;color:#aaa;">· subscription</span></div>
+      <a href="https://www.heartsconnected.org/" target="_blank" style="display:block;text-align:center;padding:11px 20px;border-radius:50px;font-size:13px;font-weight:700;text-decoration:none;color:#fff;background:#7c3aed;" onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">Get Support →</a>
+    </div>
   </div>
 </div>
   </div>
@@ -105,10 +118,10 @@
 <script>
 (function(){
   function pamFilter(type, el) {
-    document.querySelectorAll('.pam-tab').forEach(function(t){ t.classList.remove('pam-active'); });
+    document.querySelectorAll('#pam-wrap .pam-tab').forEach(function(t){ t.classList.remove('pam-active'); });
     el.classList.add('pam-active');
-    document.querySelectorAll('.pam-card').forEach(function(c){
-      c.parentElement.style.display = (type === 'all' || c.dataset.type === type) ? '' : 'none';
+    document.querySelectorAll('#pam-grid .pam-card-wrap').forEach(function(c){
+      c.style.display = (type === 'all' || c.getAttribute('data-type') === type) ? 'block' : 'none';
     });
   }
   window.pamFilter = pamFilter;
