@@ -1,186 +1,174 @@
 {
-  "generated_at": "2026-05-11T08:00:00-04:00",
-  "all_time": {
-    "total_conversations": 63,
-    "topics": [
-      {
-        "emoji": "\ud83e\ude7a",
-        "title": "Child Health & Symptoms",
-        "count": 16,
-        "pct": 25,
-        "description": "Parents seeking advice on respiratory issues, fever, congestion, cough, gas, asthma, and other pediatric symptoms.",
-        "tags": [
-          "Congestion",
-          "Fever",
-          "Cough",
-          "Asthma",
-          "Gas"
-        ],
-        "accent": "#1b5f7a"
-      },
-      {
-        "emoji": "\ud83d\ude34",
-        "title": "Sleep Issues",
-        "count": 9,
-        "pct": 14,
-        "description": "Parents navigating the 4-month sleep regression, night wakings, nap schedules, and helping babies sleep longer stretches.",
-        "tags": [
-          "Sleep Regression",
-          "Night Waking",
-          "Naps",
-          "Bedtime"
-        ],
-        "accent": "#7c3aed"
-      },
-      {
-        "emoji": "\ud83d\udc68\u200d\ud83d\udcbc",
-        "title": "Human Handoff / Live Support",
-        "count": 9,
-        "pct": 14,
-        "description": "Parents explicitly requesting to be transferred to a human representative or live support specialist.",
-        "tags": [
-          "Human Transfer",
-          "Support",
-          "Escalation",
-          "Live Agent"
-        ],
-        "accent": "#6b7280"
-      },
-      {
-        "emoji": "\ud83c\udf7c",
-        "title": "Infant & Baby Care",
-        "count": 8,
-        "pct": 13,
-        "description": "Questions about feeding amounts, breastfeeding vs. formula, introducing solids, vitamin D, and newborn care.",
-        "tags": [
-          "Breastfeeding",
-          "Formula",
-          "Feeding",
-          "Solids",
-          "Newborn"
-        ],
-        "accent": "#da3c77"
-      },
-      {
-        "emoji": "\ud83e\udde0",
-        "title": "Child Development & Milestones",
-        "count": 7,
-        "pct": 11,
-        "description": "Parents asking about separation anxiety, developmental leaps, bad dreams, Down syndrome, and cognitive milestones.",
-        "tags": [
-          "Separation Anxiety",
-          "Milestones",
-          "Down Syndrome",
-          "Development"
-        ],
-        "accent": "#f59e0b"
-      },
-      {
-        "emoji": "\ud83e\uddd8",
-        "title": "Child Mental Health",
-        "count": 5,
-        "pct": 8,
-        "description": "Parents concerned about anxiety, bad dreams, emotional distress, and behavioral issues in their children.",
-        "tags": [
-          "Anxiety",
-          "Emotions",
-          "Mental Health",
-          "Behavior"
-        ],
-        "accent": "#10c2a9"
-      },
-      {
-        "emoji": "\ud83d\udecd",
-        "title": "Product & Service Inquiry",
-        "count": 5,
-        "pct": 8,
-        "description": "Parents asking about recommended products, telehealth services, promo codes, and what ParentAI offers.",
-        "tags": [
-          "Products",
-          "NozeBot",
-          "Telehealth",
-          "About ParentAI"
-        ],
-        "accent": "#059669"
-      },
-      {
-        "emoji": "\ud83d\udea8",
-        "title": "Urgent Symptom Triage",
-        "count": 4,
-        "pct": 6,
-        "description": "Parents with urgent concerns like asthma attacks, high fever in newborns, and serious symptoms seeking immediate guidance.",
-        "tags": [
-          "Urgent",
-          "Emergency",
-          "Triage",
-          "Serious Symptoms"
-        ],
-        "accent": "#dc2626"
-      }
-    ]
-  },
-  "rankings": [
+  "updated": "2026-05-19",
+  "totalConversations": 63,
+  "parentingConversations": 49,
+  "topicCategories": 9,
+  "wordCloud": [
+    {
+      "word": "Congestion",
+      "weight": 4,
+      "color": "#1b5f7a"
+    },
+    {
+      "word": "Telehealth",
+      "weight": 3,
+      "color": "#da3c77"
+    },
+    {
+      "word": "Anxiety",
+      "weight": 3,
+      "color": "#7c3aed"
+    },
+    {
+      "word": "Breastfeeding",
+      "weight": 2,
+      "color": "#dc2626"
+    },
+    {
+      "word": "Separation Anxiety",
+      "weight": 2,
+      "color": "#f59e0b"
+    },
+    {
+      "word": "Feeding",
+      "weight": 2,
+      "color": "#059669"
+    },
+    {
+      "word": "Hospital Bag",
+      "weight": 2,
+      "color": "#10c2a9"
+    },
+    {
+      "word": "Sleep Regression",
+      "weight": 2,
+      "color": "#1b5f7a"
+    },
+    {
+      "word": "Fever",
+      "weight": 1,
+      "color": "#dc2626"
+    },
+    {
+      "word": "Cough",
+      "weight": 1,
+      "color": "#da3c77"
+    },
+    {
+      "word": "Down Syndrome",
+      "weight": 1,
+      "color": "#7c3aed"
+    },
+    {
+      "word": "Newborn",
+      "weight": 1,
+      "color": "#f59e0b"
+    },
+    {
+      "word": "Asthma",
+      "weight": 1,
+      "color": "#dc2626"
+    },
+    {
+      "word": "Formula",
+      "weight": 1,
+      "color": "#059669"
+    },
+    {
+      "word": "Gas",
+      "weight": 1,
+      "color": "#10c2a9"
+    },
+    {
+      "word": "Bad Dreams",
+      "weight": 1,
+      "color": "#7c3aed"
+    },
+    {
+      "word": "Solids",
+      "weight": 1,
+      "color": "#da3c77"
+    },
+    {
+      "word": "Naps",
+      "weight": 1,
+      "color": "#f59e0b"
+    },
+    {
+      "word": "Blood in Stool",
+      "weight": 1,
+      "color": "#dc2626"
+    },
+    {
+      "word": "Vaccines",
+      "weight": 1,
+      "color": "#1b5f7a"
+    }
+  ],
+  "topics": [
     {
       "rank": 1,
-      "prev_rank": 1,
-      "trend": "steady",
-      "title": "Child Health & Symptoms",
-      "emoji": "\ud83e\ude7a",
-      "count": 16,
-      "pct": 25,
-      "accent": "#1b5f7a",
+      "name": "Child Health & Symptoms",
+      "emoji": "🩺",
+      "description": "Parents seeking guidance on congestion, gas, cough, sore throat, allergies, infections, and other pediatric symptoms.",
+      "conversationCount": 13,
+      "percentage": 27,
+      "color": "#1b5f7a",
       "tags": [
         "Congestion",
         "Fever",
         "Cough",
+        "Gas",
         "Asthma",
-        "Gas"
+        "Allergies",
+        "Infection"
       ],
-      "description": "Parents seeking advice on respiratory issues, fever, congestion, cough, gas, asthma, and other pediatric symptoms."
+      "isNew": false,
+      "trend": "stable"
     },
     {
       "rank": 2,
-      "prev_rank": 4,
-      "trend": "up",
-      "title": "Sleep Issues",
-      "emoji": "\ud83d\ude34",
-      "count": 9,
-      "pct": 14,
-      "accent": "#7c3aed",
+      "name": "Product & Service Inquiry",
+      "emoji": "🛍️",
+      "description": "Parents asking about telehealth services, promo codes, product recommendations, and what ParentAI offers.",
+      "conversationCount": 8,
+      "percentage": 16,
+      "color": "#059669",
       "tags": [
-        "Sleep Regression",
-        "Night Waking",
-        "Naps",
-        "Bedtime"
+        "Telehealth",
+        "Products",
+        "Promo Code",
+        "NozeBot",
+        "About ParentAI"
       ],
-      "description": "Parents navigating the 4-month sleep regression, night wakings, nap schedules, and helping babies sleep longer stretches."
+      "isNew": false,
+      "trend": "up"
     },
     {
       "rank": 3,
-      "prev_rank": 3,
-      "trend": "steady",
-      "title": "Human Handoff / Live Support",
-      "emoji": "\ud83d\udc68\u200d\ud83d\udcbc",
-      "count": 9,
-      "pct": 14,
-      "accent": "#6b7280",
+      "name": "Human Handoff / Live Support",
+      "emoji": "👨‍💼",
+      "description": "Parents explicitly requesting to speak with a human representative or live support specialist.",
+      "conversationCount": 7,
+      "percentage": 14,
+      "color": "#6b7280",
       "tags": [
         "Human Transfer",
         "Support",
         "Escalation",
         "Live Agent"
       ],
-      "description": "Parents explicitly requesting to be transferred to a human representative or live support specialist."
+      "isNew": false,
+      "trend": "stable"
     },
     {
       "rank": 4,
-      "prev_rank": 4,
-      "trend": "steady",
-      "title": "Infant & Baby Care",
-      "emoji": "\ud83c\udf7c",
-      "count": 8,
-      "pct": 13,
-      "accent": "#da3c77",
+      "name": "Infant & Baby Care",
+      "emoji": "🍼",
+      "description": "Questions about breastfeeding vs. formula, feeding amounts, introducing solids, water, and newborn care.",
+      "conversationCount": 5,
+      "percentage": 10,
+      "color": "#da3c77",
       "tags": [
         "Breastfeeding",
         "Formula",
@@ -188,147 +176,94 @@
         "Solids",
         "Newborn"
       ],
-      "description": "Questions about feeding amounts, breastfeeding vs. formula, introducing solids, vitamin D, and newborn care."
+      "isNew": false,
+      "trend": "stable"
     },
     {
       "rank": 5,
-      "prev_rank": null,
-      "trend": "new",
-      "title": "Child Development & Milestones",
-      "emoji": "\ud83e\udde0",
-      "count": 7,
-      "pct": 11,
-      "accent": "#f59e0b",
+      "name": "Sleep Issues",
+      "emoji": "😴",
+      "description": "Parents navigating night wakings, sleep regression, nap schedules, and helping babies sleep longer stretches.",
+      "conversationCount": 4,
+      "percentage": 8,
+      "color": "#7c3aed",
+      "tags": [
+        "Sleep Regression",
+        "Night Waking",
+        "Naps",
+        "Bedtime"
+      ],
+      "isNew": true,
+      "trend": "new"
+    },
+    {
+      "rank": 6,
+      "name": "Child Mental Health",
+      "emoji": "🧘",
+      "description": "Parents concerned about anxiety, bad dreams, emotional distress, and behavioral issues in their children.",
+      "conversationCount": 4,
+      "percentage": 8,
+      "color": "#10c2a9",
+      "tags": [
+        "Anxiety",
+        "Bad Dreams",
+        "Emotions",
+        "Mental Health",
+        "Bedwetting"
+      ],
+      "isNew": false,
+      "trend": "up"
+    },
+    {
+      "rank": 7,
+      "name": "Pregnancy & Birth Prep",
+      "emoji": "🤰",
+      "description": "Expecting parents asking about hospital bag packing, labor timelines, and delivery preparation.",
+      "conversationCount": 4,
+      "percentage": 8,
+      "color": "#f59e0b",
+      "tags": [
+        "Hospital Bag",
+        "Labor",
+        "Delivery",
+        "Birth Prep"
+      ],
+      "isNew": true,
+      "trend": "new"
+    },
+    {
+      "rank": 8,
+      "name": "Child Development & Milestones",
+      "emoji": "🧠",
+      "description": "Parents asking about separation anxiety, developmental leaps, Down syndrome, and cognitive milestones.",
+      "conversationCount": 2,
+      "percentage": 4,
+      "color": "#f59e0b",
       "tags": [
         "Separation Anxiety",
         "Milestones",
         "Down Syndrome",
         "Development"
       ],
-      "description": "Parents asking about separation anxiety, developmental leaps, bad dreams, Down syndrome, and cognitive milestones."
+      "isNew": false,
+      "trend": "stable"
     },
     {
-      "rank": 6,
-      "prev_rank": 6,
-      "trend": "steady",
-      "title": "Child Mental Health",
-      "emoji": "\ud83e\uddd8",
-      "count": 5,
-      "pct": 8,
-      "accent": "#10c2a9",
+      "rank": 9,
+      "name": "Postpartum & New Parent Support",
+      "emoji": "🏠",
+      "description": "New parents seeking resources and advice on the transition home after childbirth.",
+      "conversationCount": 2,
+      "percentage": 4,
+      "color": "#3b82f6",
       "tags": [
-        "Anxiety",
-        "Emotions",
-        "Mental Health",
-        "Behavior"
+        "Postpartum",
+        "Hospital Discharge",
+        "New Parent",
+        "Resources"
       ],
-      "description": "Parents concerned about anxiety, bad dreams, emotional distress, and behavioral issues in their children."
-    },
-    {
-      "rank": 7,
-      "prev_rank": 5,
-      "trend": "down",
-      "title": "Product & Service Inquiry",
-      "emoji": "\ud83d\udecd",
-      "count": 5,
-      "pct": 8,
-      "accent": "#059669",
-      "tags": [
-        "Products",
-        "NozeBot",
-        "Telehealth",
-        "About ParentAI"
-      ],
-      "description": "Parents asking about recommended products, telehealth services, promo codes, and what ParentAI offers."
-    },
-    {
-      "rank": 8,
-      "prev_rank": 7,
-      "trend": "steady",
-      "title": "Urgent Symptom Triage",
-      "emoji": "\ud83d\udea8",
-      "count": 4,
-      "pct": 6,
-      "accent": "#dc2626",
-      "tags": [
-        "Urgent",
-        "Emergency",
-        "Triage",
-        "Serious Symptoms"
-      ],
-      "description": "Parents with urgent concerns like asthma attacks, high fever in newborns, and serious symptoms seeking immediate guidance."
-    }
-  ],
-  "word_cloud": [
-    {
-      "word": "Congestion",
-      "weight": 9,
-      "color": "#1b5f7a"
-    },
-    {
-      "word": "Sleep Regression",
-      "weight": 8,
-      "color": "#7c3aed"
-    },
-    {
-      "word": "Fever",
-      "weight": 8,
-      "color": "#dc2626"
-    },
-    {
-      "word": "Breastfeeding",
-      "weight": 7,
-      "color": "#da3c77"
-    },
-    {
-      "word": "Separation Anxiety",
-      "weight": 7,
-      "color": "#f59e0b"
-    },
-    {
-      "word": "Cough",
-      "weight": 6,
-      "color": "#1b5f7a"
-    },
-    {
-      "word": "Newborn",
-      "weight": 6,
-      "color": "#da3c77"
-    },
-    {
-      "word": "Anxiety",
-      "weight": 5,
-      "color": "#10c2a9"
-    },
-    {
-      "word": "Formula",
-      "weight": 5,
-      "color": "#da3c77"
-    },
-    {
-      "word": "Night Waking",
-      "weight": 5,
-      "color": "#7c3aed"
-    },
-    {
-      "word": "Down Syndrome",
-      "weight": 4,
-      "color": "#f59e0b"
-    },
-    {
-      "word": "Asthma",
-      "weight": 4,
-      "color": "#dc2626"
-    },
-    {
-      "word": "Telehealth",
-      "weight": 3,
-      "color": "#059669"
-    },
-    {
-      "word": "Milestones",
-      "weight": 3,
-      "color": "#f59e0b"
+      "isNew": true,
+      "trend": "new"
     }
   ]
 }
