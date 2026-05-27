@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-19",
+  "updated": "2026-05-27",
   "totalConversations": 63,
   "parentingConversations": 49,
   "topicCategories": 9,
@@ -109,7 +109,7 @@
     {
       "rank": 1,
       "name": "Child Health & Symptoms",
-      "emoji": "🩺",
+      "emoji": "\ud83e\ude7a",
       "description": "Parents seeking guidance on congestion, gas, cough, sore throat, allergies, infections, and other pediatric symptoms.",
       "conversationCount": 13,
       "percentage": 27,
@@ -129,7 +129,7 @@
     {
       "rank": 2,
       "name": "Product & Service Inquiry",
-      "emoji": "🛍️",
+      "emoji": "\ud83d\udecd\ufe0f",
       "description": "Parents asking about telehealth services, promo codes, product recommendations, and what ParentAI offers.",
       "conversationCount": 8,
       "percentage": 16,
@@ -147,7 +147,7 @@
     {
       "rank": 3,
       "name": "Human Handoff / Live Support",
-      "emoji": "👨‍💼",
+      "emoji": "\ud83d\udc68\u200d\ud83d\udcbc",
       "description": "Parents explicitly requesting to speak with a human representative or live support specialist.",
       "conversationCount": 7,
       "percentage": 14,
@@ -164,7 +164,7 @@
     {
       "rank": 4,
       "name": "Infant & Baby Care",
-      "emoji": "🍼",
+      "emoji": "\ud83c\udf7c",
       "description": "Questions about breastfeeding vs. formula, feeding amounts, introducing solids, water, and newborn care.",
       "conversationCount": 5,
       "percentage": 10,
@@ -182,7 +182,7 @@
     {
       "rank": 5,
       "name": "Sleep Issues",
-      "emoji": "😴",
+      "emoji": "\ud83d\ude34",
       "description": "Parents navigating night wakings, sleep regression, nap schedules, and helping babies sleep longer stretches.",
       "conversationCount": 4,
       "percentage": 8,
@@ -199,7 +199,7 @@
     {
       "rank": 6,
       "name": "Child Mental Health",
-      "emoji": "🧘",
+      "emoji": "\ud83e\uddd8",
       "description": "Parents concerned about anxiety, bad dreams, emotional distress, and behavioral issues in their children.",
       "conversationCount": 4,
       "percentage": 8,
@@ -217,7 +217,7 @@
     {
       "rank": 7,
       "name": "Pregnancy & Birth Prep",
-      "emoji": "🤰",
+      "emoji": "\ud83e\udd30",
       "description": "Expecting parents asking about hospital bag packing, labor timelines, and delivery preparation.",
       "conversationCount": 4,
       "percentage": 8,
@@ -234,7 +234,7 @@
     {
       "rank": 8,
       "name": "Child Development & Milestones",
-      "emoji": "🧠",
+      "emoji": "\ud83e\udde0",
       "description": "Parents asking about separation anxiety, developmental leaps, Down syndrome, and cognitive milestones.",
       "conversationCount": 2,
       "percentage": 4,
@@ -251,7 +251,7 @@
     {
       "rank": 9,
       "name": "Postpartum & New Parent Support",
-      "emoji": "🏠",
+      "emoji": "\ud83c\udfe0",
       "description": "New parents seeking resources and advice on the transition home after childbirth.",
       "conversationCount": 2,
       "percentage": 4,
