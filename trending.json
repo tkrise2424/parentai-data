@@ -1,269 +1,38 @@
 {
-  "updated": "2026-05-27",
-  "totalConversations": 63,
-  "parentingConversations": 49,
-  "topicCategories": 9,
-  "wordCloud": [
-    {
-      "word": "Congestion",
-      "weight": 4,
-      "color": "#1b5f7a"
-    },
-    {
-      "word": "Telehealth",
-      "weight": 3,
-      "color": "#da3c77"
-    },
-    {
-      "word": "Anxiety",
-      "weight": 3,
-      "color": "#7c3aed"
-    },
-    {
-      "word": "Breastfeeding",
-      "weight": 2,
-      "color": "#dc2626"
-    },
-    {
-      "word": "Separation Anxiety",
-      "weight": 2,
-      "color": "#f59e0b"
-    },
-    {
-      "word": "Feeding",
-      "weight": 2,
-      "color": "#059669"
-    },
-    {
-      "word": "Hospital Bag",
-      "weight": 2,
-      "color": "#10c2a9"
-    },
-    {
-      "word": "Sleep Regression",
-      "weight": 2,
-      "color": "#1b5f7a"
-    },
-    {
-      "word": "Fever",
-      "weight": 1,
-      "color": "#dc2626"
-    },
-    {
-      "word": "Cough",
-      "weight": 1,
-      "color": "#da3c77"
-    },
-    {
-      "word": "Down Syndrome",
-      "weight": 1,
-      "color": "#7c3aed"
-    },
-    {
-      "word": "Newborn",
-      "weight": 1,
-      "color": "#f59e0b"
-    },
-    {
-      "word": "Asthma",
-      "weight": 1,
-      "color": "#dc2626"
-    },
-    {
-      "word": "Formula",
-      "weight": 1,
-      "color": "#059669"
-    },
-    {
-      "word": "Gas",
-      "weight": 1,
-      "color": "#10c2a9"
-    },
-    {
-      "word": "Bad Dreams",
-      "weight": 1,
-      "color": "#7c3aed"
-    },
-    {
-      "word": "Solids",
-      "weight": 1,
-      "color": "#da3c77"
-    },
-    {
-      "word": "Naps",
-      "weight": 1,
-      "color": "#f59e0b"
-    },
-    {
-      "word": "Blood in Stool",
-      "weight": 1,
-      "color": "#dc2626"
-    },
-    {
-      "word": "Vaccines",
-      "weight": 1,
-      "color": "#1b5f7a"
-    }
+  "generated_at": "2026-06-02T15:00:00Z",
+  "all_time": {
+    "total_conversations": 47
+  },
+  "word_cloud": [
+    {"word": "Down Syndrome", "weight": 6, "color": "#1b5f7a"},
+    {"word": "Nasal Congestion", "weight": 4, "color": "#da3c77"},
+    {"word": "Sleep Regression", "weight": 4, "color": "#7c3aed"},
+    {"word": "Breastfeeding", "weight": 3, "color": "#dc2626"},
+    {"word": "Separation Anxiety", "weight": 3, "color": "#f59e0b"},
+    {"word": "Night Wakings", "weight": 3, "color": "#059669"},
+    {"word": "Cough", "weight": 3, "color": "#10c2a9"},
+    {"word": "Formula", "weight": 2, "color": "#1b5f7a"},
+    {"word": "Asthma", "weight": 2, "color": "#da3c77"},
+    {"word": "Torticollis", "weight": 2, "color": "#7c3aed"},
+    {"word": "Bedwetting", "weight": 2, "color": "#dc2626"},
+    {"word": "Fever", "weight": 2, "color": "#f59e0b"},
+    {"word": "Newborn Care", "weight": 2, "color": "#059669"},
+    {"word": "Feeding Amounts", "weight": 2, "color": "#10c2a9"},
+    {"word": "Anxiety", "weight": 2, "color": "#1b5f7a"},
+    {"word": "Nap Schedule", "weight": 2, "color": "#da3c77"},
+    {"word": "Gas & Colic", "weight": 2, "color": "#7c3aed"},
+    {"word": "Earring Infection", "weight": 1, "color": "#dc2626"},
+    {"word": "Vaccines", "weight": 1, "color": "#f59e0b"},
+    {"word": "Outings & Concerts", "weight": 1, "color": "#059669"}
   ],
-  "topics": [
-    {
-      "rank": 1,
-      "name": "Child Health & Symptoms",
-      "emoji": "\ud83e\ude7a",
-      "description": "Parents seeking guidance on congestion, gas, cough, sore throat, allergies, infections, and other pediatric symptoms.",
-      "conversationCount": 13,
-      "percentage": 27,
-      "color": "#1b5f7a",
-      "tags": [
-        "Congestion",
-        "Fever",
-        "Cough",
-        "Gas",
-        "Asthma",
-        "Allergies",
-        "Infection"
-      ],
-      "isNew": false,
-      "trend": "stable"
-    },
-    {
-      "rank": 2,
-      "name": "Product & Service Inquiry",
-      "emoji": "\ud83d\udecd\ufe0f",
-      "description": "Parents asking about telehealth services, promo codes, product recommendations, and what ParentAI offers.",
-      "conversationCount": 8,
-      "percentage": 16,
-      "color": "#059669",
-      "tags": [
-        "Telehealth",
-        "Products",
-        "Promo Code",
-        "NozeBot",
-        "About ParentAI"
-      ],
-      "isNew": false,
-      "trend": "up"
-    },
-    {
-      "rank": 3,
-      "name": "Human Handoff / Live Support",
-      "emoji": "\ud83d\udc68\u200d\ud83d\udcbc",
-      "description": "Parents explicitly requesting to speak with a human representative or live support specialist.",
-      "conversationCount": 7,
-      "percentage": 14,
-      "color": "#6b7280",
-      "tags": [
-        "Human Transfer",
-        "Support",
-        "Escalation",
-        "Live Agent"
-      ],
-      "isNew": false,
-      "trend": "stable"
-    },
-    {
-      "rank": 4,
-      "name": "Infant & Baby Care",
-      "emoji": "\ud83c\udf7c",
-      "description": "Questions about breastfeeding vs. formula, feeding amounts, introducing solids, water, and newborn care.",
-      "conversationCount": 5,
-      "percentage": 10,
-      "color": "#da3c77",
-      "tags": [
-        "Breastfeeding",
-        "Formula",
-        "Feeding",
-        "Solids",
-        "Newborn"
-      ],
-      "isNew": false,
-      "trend": "stable"
-    },
-    {
-      "rank": 5,
-      "name": "Sleep Issues",
-      "emoji": "\ud83d\ude34",
-      "description": "Parents navigating night wakings, sleep regression, nap schedules, and helping babies sleep longer stretches.",
-      "conversationCount": 4,
-      "percentage": 8,
-      "color": "#7c3aed",
-      "tags": [
-        "Sleep Regression",
-        "Night Waking",
-        "Naps",
-        "Bedtime"
-      ],
-      "isNew": true,
-      "trend": "new"
-    },
-    {
-      "rank": 6,
-      "name": "Child Mental Health",
-      "emoji": "\ud83e\uddd8",
-      "description": "Parents concerned about anxiety, bad dreams, emotional distress, and behavioral issues in their children.",
-      "conversationCount": 4,
-      "percentage": 8,
-      "color": "#10c2a9",
-      "tags": [
-        "Anxiety",
-        "Bad Dreams",
-        "Emotions",
-        "Mental Health",
-        "Bedwetting"
-      ],
-      "isNew": false,
-      "trend": "up"
-    },
-    {
-      "rank": 7,
-      "name": "Pregnancy & Birth Prep",
-      "emoji": "\ud83e\udd30",
-      "description": "Expecting parents asking about hospital bag packing, labor timelines, and delivery preparation.",
-      "conversationCount": 4,
-      "percentage": 8,
-      "color": "#f59e0b",
-      "tags": [
-        "Hospital Bag",
-        "Labor",
-        "Delivery",
-        "Birth Prep"
-      ],
-      "isNew": true,
-      "trend": "new"
-    },
-    {
-      "rank": 8,
-      "name": "Child Development & Milestones",
-      "emoji": "\ud83e\udde0",
-      "description": "Parents asking about separation anxiety, developmental leaps, Down syndrome, and cognitive milestones.",
-      "conversationCount": 2,
-      "percentage": 4,
-      "color": "#f59e0b",
-      "tags": [
-        "Separation Anxiety",
-        "Milestones",
-        "Down Syndrome",
-        "Development"
-      ],
-      "isNew": false,
-      "trend": "stable"
-    },
-    {
-      "rank": 9,
-      "name": "Postpartum & New Parent Support",
-      "emoji": "\ud83c\udfe0",
-      "description": "New parents seeking resources and advice on the transition home after childbirth.",
-      "conversationCount": 2,
-      "percentage": 4,
-      "color": "#3b82f6",
-      "tags": [
-        "Postpartum",
-        "Hospital Discharge",
-        "New Parent",
-        "Resources"
-      ],
-      "isNew": true,
-      "trend": "new"
-    }
+  "rankings": [
+    {"rank": 1, "emoji": "🩺", "title": "Child Health & Symptoms", "description": "Parents seeking guidance on congestion, cough, asthma, rashes, gas pain, and common pediatric ailments.", "count": 9, "pct": 19, "accent": "#1b5f7a", "tags": ["Congestion", "Cough", "Asthma", "Rash", "Fever", "Infection", "Gas"]},
+    {"rank": 2, "emoji": "😴", "title": "Sleep Issues", "description": "Parents navigating night wakings, short naps, sleep regression, and helping babies sleep longer stretches.", "count": 8, "pct": 17, "accent": "#7c3aed", "tags": ["Sleep Regression", "Night Wakings", "Nap Schedule", "Bedtime", "Fussy Baby"]},
+    {"rank": 3, "emoji": "🌱", "title": "Growth & Milestones", "description": "Questions about developmental milestones, Down syndrome support, torticollis, and motor skills.", "count": 7, "pct": 15, "accent": "#D4A237", "tags": ["Down Syndrome", "Torticollis", "Motor Skills", "Development", "Milestones"]},
+    {"rank": 4, "emoji": "😊", "title": "Behavior & Emotions", "description": "Coping with separation anxiety, excessive crying, bad dreams, bedwetting, and emotional distress.", "count": 6, "pct": 13, "accent": "#7b4d8c", "tags": ["Separation Anxiety", "Crying", "Bedwetting", "Anxiety", "Emotions"]},
+    {"rank": 5, "emoji": "🍽️", "title": "Nutrition & Feeding", "description": "Guidance on breastfeeding, formula, feeding amounts, introducing solids, and water safety.", "count": 6, "pct": 13, "accent": "#da3c77", "tags": ["Breastfeeding", "Formula", "Feeding", "Solids", "Water Safety"]},
+    {"rank": 6, "emoji": "🍼", "title": "Everyday Baby Care", "description": "Practical questions about diapering, outings with baby, vaccines, and daily newborn routines.", "count": 6, "pct": 13, "accent": "#059669", "tags": ["Diapering", "Outings", "Vaccines", "Daily Care", "Routines"]},
+    {"rank": 7, "emoji": "ℹ️", "title": "About ParentAI & Service", "description": "Curious parents asking what ParentAI is, how it works, and what makes it different from ChatGPT.", "count": 4, "pct": 9, "accent": "#6b7280", "tags": ["About ParentAI", "AI vs Doctor", "Features", "Getting Started"]},
+    {"rank": 8, "emoji": "🚨", "title": "Urgent Symptom Triage", "description": "Urgent concerns like asthma attacks and breathing difficulties requiring immediate guidance.", "count": 1, "pct": 2, "accent": "#dc2626", "tags": ["Asthma Attack", "Breathing Issues", "Emergency", "Triage"]}
   ]
 }
